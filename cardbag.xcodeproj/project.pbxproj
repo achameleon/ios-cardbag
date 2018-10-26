@@ -10,6 +10,10 @@
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
+		CEE513AA218311720018FCC7 /* OwnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE513A6218311720018FCC7 /* OwnTableViewController.swift */; };
+		CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE513A7218311720018FCC7 /* CustomCell.swift */; };
+		CEE513AC218311720018FCC7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE513A8218311720018FCC7 /* CustomCell.xib */; };
+		CEE513AD218311720018FCC7 /* OwnTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE513A9218311720018FCC7 /* OwnTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE30C7AF2182FD14004FD699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE30C7B12182FD14004FD699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE513A6218311720018FCC7 /* OwnTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnTableViewController.swift; sourceTree = "<group>"; };
+		CEE513A7218311720018FCC7 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		CEE513A8218311720018FCC7 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CEE513A9218311720018FCC7 /* OwnTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OwnTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				CE30C7A52182FD11004FD699 /* AppDelegate.swift */,
+				CEE513A7218311720018FCC7 /* CustomCell.swift */,
+				CEE513A8218311720018FCC7 /* CustomCell.xib */,
+				CEE513A6218311720018FCC7 /* OwnTableViewController.swift */,
+				CEE513A9218311720018FCC7 /* OwnTableViewController.xib */,
 				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
 				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
 				CE30C7B12182FD14004FD699 /* Info.plist */,
@@ -116,7 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE513AC218311720018FCC7 /* CustomCell.xib in Resources */,
 				CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */,
+				CEE513AD218311720018FCC7 /* OwnTableViewController.xib in Resources */,
 				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE513AA218311720018FCC7 /* OwnTableViewController.swift in Sources */,
+				CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
