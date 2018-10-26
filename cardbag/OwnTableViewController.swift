@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
 class OwnTableViewController: UIViewController {
-
-    let data = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +18,8 @@ class OwnTableViewController: UIViewController {
         navigationItem.title = "Тестовая таблица"
         tableView.delegate = self
         tableView.dataSource = self
+    
+        
     }
 
 }

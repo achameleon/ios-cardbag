@@ -14,9 +14,12 @@
 		CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE513A7218311720018FCC7 /* CustomCell.swift */; };
 		CEE513AC218311720018FCC7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE513A8218311720018FCC7 /* CustomCell.xib */; };
 		CEE513AD218311720018FCC7 /* OwnTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE513A9218311720018FCC7 /* OwnTableViewController.xib */; };
+		CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE513AE21831E280018FCC7 /* Alamofire.framework */; };
+		DD9FC1430F003A586D202EF7 /* Pods_cardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20279B826929C838DC6D9749 /* Pods_cardbag.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20279B826929C838DC6D9749 /* Pods_cardbag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cardbag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		CEE513A7218311720018FCC7 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CEE513A8218311720018FCC7 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CEE513A9218311720018FCC7 /* OwnTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OwnTableViewController.xib; sourceTree = "<group>"; };
+		CEE513AE21831E280018FCC7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F90D5C146ADE96FD086F10E4 /* Pods-cardbag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.debug.xcconfig"; sourceTree = "<group>"; };
+		FD73E05D8C7F2C389BB29DF7 /* Pods-cardbag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */,
+				DD9FC1430F003A586D202EF7 /* Pods_cardbag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E4F7391081D2E5972DE6546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE513AE21831E280018FCC7 /* Alamofire.framework */,
+				20279B826929C838DC6D9749 /* Pods_cardbag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE30C7992182FD11004FD699 = {
 			isa = PBXGroup;
 			children = (
 				CE30C7A42182FD11004FD699 /* cardbag */,
 				CE30C7A32182FD11004FD699 /* Products */,
+				E6BF3341303005204CACC9B5 /* Pods */,
+				4E4F7391081D2E5972DE6546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +89,15 @@
 			path = cardbag;
 			sourceTree = "<group>";
 		};
+		E6BF3341303005204CACC9B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F90D5C146ADE96FD086F10E4 /* Pods-cardbag.debug.xcconfig */,
+				FD73E05D8C7F2C389BB29DF7 /* Pods-cardbag.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE30C7B42182FD14004FD699 /* Build configuration list for PBXNativeTarget "cardbag" */;
 			buildPhases = (
+				CEE513B021831ED60018FCC7 /* Carthage Run Script */,
+				E1A0539FB662D7F497E58017 /* [CP] Check Pods Manifest.lock */,
 				CE30C79E2182FD11004FD699 /* Sources */,
 				CE30C79F2182FD11004FD699 /* Frameworks */,
 				CE30C7A02182FD11004FD699 /* Resources */,
+				D0210DED1759ACCBA02568BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +167,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CEE513B021831ED60018FCC7 /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Carthage Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		D0210DED1759ACCBA02568BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cardbag/Pods-cardbag-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cardbag/Pods-cardbag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A0539FB662D7F497E58017 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cardbag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE30C79E2182FD11004FD699 /* Sources */ = {
@@ -278,9 +367,14 @@
 		};
 		CE30C7B52182FD14004FD699 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F90D5C146ADE96FD086F10E4 /* Pods-cardbag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = cardbag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,9 +389,14 @@
 		};
 		CE30C7B62182FD14004FD699 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD73E05D8C7F2C389BB29DF7 /* Pods-cardbag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = cardbag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
