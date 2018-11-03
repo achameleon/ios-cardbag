@@ -10,6 +10,10 @@
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
+		CEC354BB218C469400AD7CFE /* CardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BA218C469400AD7CFE /* CardAPI.swift */; };
+		CEC354BD218C475F00AD7CFE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BC218C475F00AD7CFE /* Const.swift */; };
+		CEC354BF218C591B00AD7CFE /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BE218C591B00AD7CFE /* KeyStorage.swift */; };
+		CEC354C1218C623600AD7CFE /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC354C0218C623600AD7CFE /* VKSdkFramework.framework */; };
 		CEE513AA218311720018FCC7 /* OwnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE513A6218311720018FCC7 /* OwnTableViewController.swift */; };
 		CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE513A7218311720018FCC7 /* CustomCell.swift */; };
 		CEE513AC218311720018FCC7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE513A8218311720018FCC7 /* CustomCell.xib */; };
@@ -23,6 +27,10 @@
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE30C7AF2182FD14004FD699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE30C7B12182FD14004FD699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC354BA218C469400AD7CFE /* CardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAPI.swift; sourceTree = "<group>"; };
+		CEC354BC218C475F00AD7CFE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		CEC354BE218C591B00AD7CFE /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
+		CEC354C0218C623600AD7CFE /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		CEE513A6218311720018FCC7 /* OwnTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnTableViewController.swift; sourceTree = "<group>"; };
 		CEE513A7218311720018FCC7 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CEE513A8218311720018FCC7 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC354C1218C623600AD7CFE /* VKSdkFramework.framework in Frameworks */,
 				CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +54,7 @@
 		4E4F7391081D2E5972DE6546 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEC354C0218C623600AD7CFE /* VKSdkFramework.framework */,
 				CEE513AE21831E280018FCC7 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -78,6 +88,9 @@
 				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
 				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
 				CE30C7B12182FD14004FD699 /* Info.plist */,
+				CEC354BA218C469400AD7CFE /* CardAPI.swift */,
+				CEC354BC218C475F00AD7CFE /* Const.swift */,
+				CEC354BE218C591B00AD7CFE /* KeyStorage.swift */,
 			);
 			path = cardbag;
 			sourceTree = "<group>";
@@ -158,6 +171,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
@@ -173,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC354BB218C469400AD7CFE /* CardAPI.swift in Sources */,
 				CEE513AA218311720018FCC7 /* OwnTableViewController.swift in Sources */,
 				CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
+				CEC354BD218C475F00AD7CFE /* Const.swift in Sources */,
+				CEC354BF218C591B00AD7CFE /* KeyStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

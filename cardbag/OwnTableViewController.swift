@@ -9,27 +9,39 @@
 import UIKit
 import Alamofire
 
-struct TestData {
+struct Jsonplaceholder: Codable {
     
     var userId: Int = 0
+    var id: Int = 0
     var title: String = ""
-    var id = 0
-    var complited: Bool = false
+    var completed: Bool = false
     
-    init (map: [String: AnyObject]) {
-        userId = map["userId"] as! Int
-        title = map["title"] as! String
-        id = map["id"] as! Int
-        complited = map["completed"] as! Bool
+}
+
+struct CategoryItem: Codable {
+    
+    var id: Int = 0
+    var title: String = ""
+    
+}
+
+struct CategoryList: Codable {
+    
+    var categoryList: [CategoryItem] = []
+    
+    enum CodingKeys: String, CodingKey {
+        case categoryList
     }
     
     func show() {
-        print ("userId = \(userId)  title = \(title)")
+        
     }
     
 }
 
 class OwnTableViewController: UIViewController {
+    
+    let keyStorage: KeyStorage = KeyStorage()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,28 +50,43 @@ class OwnTableViewController: UIViewController {
         navigationItem.title = "Тестовая таблица"
         tableView.delegate = self
         tableView.dataSource = self
-    
-        let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
-        Alamofire.request(url).responseJSON { (response) in
-            if let d = response.result.value as? [String: AnyObject] {
-                let object = TestData(map: d)
-                object.show()
+        
+        let alert = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
+        
+        let action1 = UIAlertAction(title: "Ok", style: .default) { (_) in
+            print ("Ok")
+        }
+        
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            print ("Cancel")
+        }
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+
+        Alamofire.request(CardAPI.categoryList.url).responseJSON { (response) in
+            if let d = response.data {
+                
             }
         }
-    
-        /*
-        let request = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error { return }
-            guard let data = data else { return }
-            let d = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
-            if let dict = d as? [String: AnyObject] {
-                let object = TestData(map: dict)
-                object.show()
+        
+        print (keyStorage.userId)
+        print (keyStorage.title)
+        
+        Alamofire.request(URL(string: "https://jsonplaceholder.typicode.com/todos/1")!).responseJSON
+        { [weak self] (response) in
+            if let d = response.data {
+                do {
+                    let object = try JSONDecoder().decode(Jsonplaceholder.self, from: d)
+                    self?.keyStorage.userId = object.userId
+                    self?.keyStorage.title = object.title
+                } catch {
+                    print (error)
+                }
             }
         }
-        task.resume()
- */
+        
+    
     }
 
 }
