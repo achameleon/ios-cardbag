@@ -7,26 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840EAFE821949FA2005E3102 /* AddCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFE721949FA2005E3102 /* AddCardsViewController.swift */; };
-		840EAFEA21949FB9005E3102 /* AddCardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFE921949FB9005E3102 /* AddCardsViewController.xib */; };
-		840EAFED21949FFE005E3102 /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFEC21949FFE005E3102 /* CardsListViewController.swift */; };
-		840EAFEF2194A004005E3102 /* CardsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFEE2194A004005E3102 /* CardsListViewController.xib */; };
-		840EAFF22194A111005E3102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFF12194A111005E3102 /* LaunchScreen.storyboard */; };
-		840EAFF62194C2B3005E3102 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840EAFF52194C2B2005E3102 /* Alamofire.framework */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
+		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840EAFE721949FA2005E3102 /* AddCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardsViewController.swift; sourceTree = "<group>"; };
-		840EAFE921949FB9005E3102 /* AddCardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardsViewController.xib; sourceTree = "<group>"; };
-		840EAFEC21949FFE005E3102 /* CardsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
-		840EAFEE2194A004005E3102 /* CardsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsListViewController.xib; sourceTree = "<group>"; };
-		840EAFF12194A111005E3102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		840EAFF52194C2B2005E3102 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE30C7AF2182FD14004FD699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE30C7B12182FD14004FD699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,63 +25,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840EAFF62194C2B3005E3102 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		840EAFE521949EA6005E3102 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				840EAFF12194A111005E3102 /* LaunchScreen.storyboard */,
-				840EAFE621949F71005E3102 /* AddCards */,
-				840EAFEB21949FD2005E3102 /* CardsList */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		840EAFE621949F71005E3102 /* AddCards */ = {
-			isa = PBXGroup;
-			children = (
-				840EAFE921949FB9005E3102 /* AddCardsViewController.xib */,
-				840EAFE721949FA2005E3102 /* AddCardsViewController.swift */,
-			);
-			path = AddCards;
-			sourceTree = "<group>";
-		};
-		840EAFEB21949FD2005E3102 /* CardsList */ = {
-			isa = PBXGroup;
-			children = (
-				840EAFEE2194A004005E3102 /* CardsListViewController.xib */,
-				840EAFEC21949FFE005E3102 /* CardsListViewController.swift */,
-			);
-			path = CardsList;
-			sourceTree = "<group>";
-		};
-		840EAFF02194A075005E3102 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		840EAFF42194C2B1005E3102 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				840EAFF52194C2B2005E3102 /* Alamofire.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CE30C7992182FD11004FD699 = {
 			isa = PBXGroup;
 			children = (
 				CE30C7A42182FD11004FD699 /* cardbag */,
 				CE30C7A32182FD11004FD699 /* Products */,
-				840EAFF42194C2B1005E3102 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +50,9 @@
 		CE30C7A42182FD11004FD699 /* cardbag */ = {
 			isa = PBXGroup;
 			children = (
-				840EAFF02194A075005E3102 /* Resources */,
-				840EAFE521949EA6005E3102 /* UI */,
 				CE30C7A52182FD11004FD699 /* AppDelegate.swift */,
+				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
+				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
 				CE30C7B12182FD14004FD699 /* Info.plist */,
 			);
 			path = cardbag;
@@ -124,7 +68,6 @@
 				CE30C79E2182FD11004FD699 /* Sources */,
 				CE30C79F2182FD11004FD699 /* Frameworks */,
 				CE30C7A02182FD11004FD699 /* Resources */,
-				840EAFF32194C07F005E3102 /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -173,50 +116,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840EAFEF2194A004005E3102 /* CardsListViewController.xib in Resources */,
-				840EAFF22194A111005E3102 /* LaunchScreen.storyboard in Resources */,
+				CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */,
 				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
-				840EAFEA21949FB9005E3102 /* AddCardsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		840EAFF32194C07F005E3102 /* Carthage Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-			);
-			name = "Carthage Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOULDER_PATH)/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE30C79E2182FD11004FD699 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840EAFED21949FFE005E3102 /* CardsListViewController.swift in Sources */,
-				840EAFE821949FA2005E3102 /* AddCardsViewController.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE30C7AF2182FD14004FD699 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE30C7B22182FD14004FD699 /* Debug */ = {
@@ -338,10 +265,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = cardbag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,10 +282,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = cardbag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
