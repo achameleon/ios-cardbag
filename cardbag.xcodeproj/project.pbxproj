@@ -13,6 +13,8 @@
 		840EAFEF2194A004005E3102 /* CardsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFEE2194A004005E3102 /* CardsListViewController.xib */; };
 		840EAFF22194A111005E3102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFF12194A111005E3102 /* LaunchScreen.storyboard */; };
 		840EAFF62194C2B3005E3102 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840EAFF52194C2B2005E3102 /* Alamofire.framework */; };
+		840EAFFA2194C8BE005E3102 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFF92194C8BE005E3102 /* Card.swift */; };
+		840EAFFC2194CBBD005E3102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFFB2194CBBD005E3102 /* Category.swift */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 		840EAFEE2194A004005E3102 /* CardsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsListViewController.xib; sourceTree = "<group>"; };
 		840EAFF12194A111005E3102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840EAFF52194C2B2005E3102 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		840EAFF92194C8BE005E3102 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		840EAFFB2194CBBD005E3102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		840EAFF82194C866005E3102 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				840EAFF92194C8BE005E3102 /* Card.swift */,
+				840EAFFB2194CBBD005E3102 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE30C7992182FD11004FD699 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		CE30C7A42182FD11004FD699 /* cardbag */ = {
 			isa = PBXGroup;
 			children = (
+				840EAFF82194C866005E3102 /* Models */,
 				840EAFF02194A075005E3102 /* Resources */,
 				840EAFE521949EA6005E3102 /* UI */,
 				CE30C7A52182FD11004FD699 /* AppDelegate.swift */,
@@ -211,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840EAFED21949FFE005E3102 /* CardsListViewController.swift in Sources */,
+				840EAFFC2194CBBD005E3102 /* Category.swift in Sources */,
 				840EAFE821949FA2005E3102 /* AddCardsViewController.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
+				840EAFFA2194C8BE005E3102 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
