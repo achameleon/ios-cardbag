@@ -7,93 +7,184 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
-		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
-		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
+		0FDB7F46218B56330099B17A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDB7F45218B56330099B17A /* Alamofire.framework */; };
+		1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB770218194D700E647FD /* RearPhotoViewController.xib */; };
+		58E38D9592B24C5888CAC83B /* Pods_CardBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD0079815BE770641D3910B /* Pods_CardBag.framework */; };
+		8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */; };
+		8421CE1C2177B54E00C469C5 /* EmptyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */; };
+		8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449B06421704C5D00191D89 /* AppDelegate.swift */; };
+		8449B06C21704C6900191D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8449B06B21704C6900191D89 /* Assets.xcassets */; };
+		8449B06F21704C6900191D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8449B06D21704C6900191D89 /* LaunchScreen.storyboard */; };
+		84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB760217F7F8000E647FD /* MyCustomCell.swift */; };
+		84FCB763217F7FB600E647FD /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB762217F7FB600E647FD /* MyCustomCell.xib */; };
+		84FCB766217F815C00E647FD /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB764217F815C00E647FD /* AddCardViewController.swift */; };
+		84FCB767217F815C00E647FD /* AddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB765217F815C00E647FD /* AddCardViewController.xib */; };
+		84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */; };
+		84FCB76B21804B3300E647FD /* FrontPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */; };
+		84FCB771218194D700E647FD /* RearPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76F218194D700E647FD /* RearPhotoViewController.swift */; };
+		84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB7722182034800E647FD /* CategoriesViewController.swift */; };
+		84FCB7752182034800E647FD /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB7732182034800E647FD /* CategoriesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE30C7AF2182FD14004FD699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE30C7B12182FD14004FD699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDB7F45218B56330099B17A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD4FB2D51FAB5DC668AE9A7 /* Pods-CardBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardBag/Pods-CardBag.debug.xcconfig"; sourceTree = "<group>"; };
+		8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPageViewController.swift; sourceTree = "<group>"; };
+		8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPageViewController.xib; sourceTree = "<group>"; };
+		8449B06121704C5D00191D89 /* CardBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8449B06421704C5D00191D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8449B06B21704C6900191D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8449B06E21704C6900191D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8449B07021704C6900191D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FCB760217F7F8000E647FD /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		84FCB762217F7FB600E647FD /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		84FCB764217F815C00E647FD /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		84FCB765217F815C00E647FD /* AddCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardViewController.xib; sourceTree = "<group>"; };
+		84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPhotoViewController.swift; sourceTree = "<group>"; };
+		84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrontPhotoViewController.xib; sourceTree = "<group>"; };
+		84FCB76F218194D700E647FD /* RearPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearPhotoViewController.swift; sourceTree = "<group>"; };
+		84FCB770218194D700E647FD /* RearPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RearPhotoViewController.xib; sourceTree = "<group>"; };
+		84FCB7722182034800E647FD /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		84FCB7732182034800E647FD /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		92AD14B2DDFAB228D0338136 /* Pods-CardBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardBag/Pods-CardBag.release.xcconfig"; sourceTree = "<group>"; };
+		CAD0079815BE770641D3910B /* Pods_CardBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE30C79F2182FD11004FD699 /* Frameworks */ = {
+		8449B05E21704C5D00191D89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDB7F46218B56330099B17A /* Alamofire.framework in Frameworks */,
+				58E38D9592B24C5888CAC83B /* Pods_CardBag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE30C7992182FD11004FD699 = {
+		7F517DE11DDD0EE9C3091392 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE30C7A42182FD11004FD699 /* cardbag */,
-				CE30C7A32182FD11004FD699 /* Products */,
+				0FDB7F45218B56330099B17A /* Alamofire.framework */,
+				CAD0079815BE770641D3910B /* Pods_CardBag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8449B05821704C5D00191D89 = {
+			isa = PBXGroup;
+			children = (
+				8449B06321704C5D00191D89 /* CardBag */,
+				8449B06221704C5D00191D89 /* Products */,
+				870EEE06D6A870FBEE729BF5 /* Pods */,
+				7F517DE11DDD0EE9C3091392 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		CE30C7A32182FD11004FD699 /* Products */ = {
+		8449B06221704C5D00191D89 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE30C7A22182FD11004FD699 /* cardbag.app */,
+				8449B06121704C5D00191D89 /* CardBag.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE30C7A42182FD11004FD699 /* cardbag */ = {
+		8449B06321704C5D00191D89 /* CardBag */ = {
 			isa = PBXGroup;
 			children = (
-				CE30C7A52182FD11004FD699 /* AppDelegate.swift */,
-				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
-				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
-				CE30C7B12182FD14004FD699 /* Info.plist */,
+				8449B06421704C5D00191D89 /* AppDelegate.swift */,
+				8449B07621704D9E00191D89 /* Resources */,
+				8449B07721704DD900191D89 /* UI */,
 			);
-			path = cardbag;
+			path = CardBag;
+			sourceTree = "<group>";
+		};
+		8449B07621704D9E00191D89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8449B06B21704C6900191D89 /* Assets.xcassets */,
+				8449B07021704C6900191D89 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8449B07721704DD900191D89 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8449B06D21704C6900191D89 /* LaunchScreen.storyboard */,
+				8449B07C21704E8F00191D89 /* CardsList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8449B07C21704E8F00191D89 /* CardsList */ = {
+			isa = PBXGroup;
+			children = (
+				8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */,
+				8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */,
+				84FCB764217F815C00E647FD /* AddCardViewController.swift */,
+				84FCB765217F815C00E647FD /* AddCardViewController.xib */,
+				84FCB760217F7F8000E647FD /* MyCustomCell.swift */,
+				84FCB762217F7FB600E647FD /* MyCustomCell.xib */,
+				84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */,
+				84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */,
+				84FCB76F218194D700E647FD /* RearPhotoViewController.swift */,
+				84FCB770218194D700E647FD /* RearPhotoViewController.xib */,
+				84FCB7722182034800E647FD /* CategoriesViewController.swift */,
+				84FCB7732182034800E647FD /* CategoriesViewController.xib */,
+			);
+			path = CardsList;
+			sourceTree = "<group>";
+		};
+		870EEE06D6A870FBEE729BF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FD4FB2D51FAB5DC668AE9A7 /* Pods-CardBag.debug.xcconfig */,
+				92AD14B2DDFAB228D0338136 /* Pods-CardBag.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE30C7A12182FD11004FD699 /* cardbag */ = {
+		8449B06021704C5D00191D89 /* CardBag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE30C7B42182FD14004FD699 /* Build configuration list for PBXNativeTarget "cardbag" */;
+			buildConfigurationList = 8449B07321704C6900191D89 /* Build configuration list for PBXNativeTarget "CardBag" */;
 			buildPhases = (
-				CE30C79E2182FD11004FD699 /* Sources */,
-				CE30C79F2182FD11004FD699 /* Frameworks */,
-				CE30C7A02182FD11004FD699 /* Resources */,
+				4F5845ABE34CE4BC3EDB3A80 /* [CP] Check Pods Manifest.lock */,
+				8449B05D21704C5D00191D89 /* Sources */,
+				8449B05E21704C5D00191D89 /* Frameworks */,
+				8449B05F21704C5D00191D89 /* Resources */,
+				9E6B331A336D93E2201B8010 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = cardbag;
-			productName = cardbag;
-			productReference = CE30C7A22182FD11004FD699 /* cardbag.app */;
+			name = CardBag;
+			productName = Tutorial;
+			productReference = 8449B06121704C5D00191D89 /* CardBag.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE30C79A2182FD11004FD699 /* Project object */ = {
+		8449B05921704C5D00191D89 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "E-Lite-Telecom";
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = arcMi;
 				TargetAttributes = {
-					CE30C7A12182FD11004FD699 = {
-						CreatedOnToolsVersion = 9.4.1;
+					8449B06021704C5D00191D89 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
-			buildConfigurationList = CE30C79D2182FD11004FD699 /* Build configuration list for PBXProject "cardbag" */;
+			buildConfigurationList = 8449B05C21704C5D00191D89 /* Build configuration list for PBXProject "CardBag" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -101,44 +192,103 @@
 				en,
 				Base,
 			);
-			mainGroup = CE30C7992182FD11004FD699;
-			productRefGroup = CE30C7A32182FD11004FD699 /* Products */;
+			mainGroup = 8449B05821704C5D00191D89;
+			productRefGroup = 8449B06221704C5D00191D89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE30C7A12182FD11004FD699 /* cardbag */,
+				8449B06021704C5D00191D89 /* CardBag */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE30C7A02182FD11004FD699 /* Resources */ = {
+		8449B05F21704C5D00191D89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */,
-				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
+				1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */,
+				8421CE1C2177B54E00C469C5 /* EmptyPageViewController.xib in Resources */,
+				8449B06F21704C6900191D89 /* LaunchScreen.storyboard in Resources */,
+				84FCB7752182034800E647FD /* CategoriesViewController.xib in Resources */,
+				84FCB767217F815C00E647FD /* AddCardViewController.xib in Resources */,
+				84FCB763217F7FB600E647FD /* MyCustomCell.xib in Resources */,
+				8449B06C21704C6900191D89 /* Assets.xcassets in Resources */,
+				84FCB76B21804B3300E647FD /* FrontPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F5845ABE34CE4BC3EDB3A80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardBag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6B331A336D93E2201B8010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CardBag/Pods-CardBag-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardBag/Pods-CardBag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		CE30C79E2182FD11004FD699 /* Sources */ = {
+		8449B05D21704C5D00191D89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
+				84FCB766217F815C00E647FD /* AddCardViewController.swift in Sources */,
+				84FCB771218194D700E647FD /* RearPhotoViewController.swift in Sources */,
+				84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */,
+				84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */,
+				8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */,
+				84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */,
+				8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */ = {
+		8449B06D21704C6900191D89 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE30C7AF2182FD14004FD699 /* Base */,
+				8449B06E21704C6900191D89 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -146,7 +296,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CE30C7B22182FD14004FD699 /* Debug */ = {
+		8449B07121704C6900191D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,8 +347,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -206,7 +357,7 @@
 			};
 			name = Debug;
 		};
-		CE30C7B32182FD14004FD699 /* Release */ = {
+		8449B07221704C6900191D89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,8 +402,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -260,36 +412,41 @@
 			};
 			name = Release;
 		};
-		CE30C7B52182FD14004FD699 /* Debug */ = {
+		8449B07421704C6900191D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD4FB2D51FAB5DC668AE9A7 /* Pods-CardBag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = cardbag/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CardBag/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.goodline.cardbag;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CE30C7B62182FD14004FD699 /* Release */ = {
+		8449B07521704C6900191D89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92AD14B2DDFAB228D0338136 /* Pods-CardBag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = cardbag/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CardBag/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.goodline.cardbag;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -297,25 +454,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE30C79D2182FD11004FD699 /* Build configuration list for PBXProject "cardbag" */ = {
+		8449B05C21704C5D00191D89 /* Build configuration list for PBXProject "CardBag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE30C7B22182FD14004FD699 /* Debug */,
-				CE30C7B32182FD14004FD699 /* Release */,
+				8449B07121704C6900191D89 /* Debug */,
+				8449B07221704C6900191D89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE30C7B42182FD14004FD699 /* Build configuration list for PBXNativeTarget "cardbag" */ = {
+		8449B07321704C6900191D89 /* Build configuration list for PBXNativeTarget "CardBag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE30C7B52182FD14004FD699 /* Debug */,
-				CE30C7B62182FD14004FD699 /* Release */,
+				8449B07421704C6900191D89 /* Debug */,
+				8449B07521704C6900191D89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE30C79A2182FD11004FD699 /* Project object */;
+	rootObject = 8449B05921704C5D00191D89 /* Project object */;
 }
