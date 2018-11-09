@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCardViewController" customModule="CardBag" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPhoto" destination="8ID-BU-rzk" id="7q4-MP-oIe"/>
+                <outlet property="cardName" destination="Gcf-B1-OY6" id="sOv-rc-D3S"/>
+                <outlet property="categories" destination="cbi-zx-s7Z" id="SWh-85-1Jd"/>
+                <outlet property="sale" destination="bqA-bG-y1f" id="G7H-UM-4UX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ID-BU-rzk">
+                    <rect key="frame" x="25" y="232" width="326" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zTk-zt-tSX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Button" backgroundImage="but-bg">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onChangeBtn:" destination="-1" eventType="touchUpInside" id="uok-mC-p8K"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gcf-B1-OY6" userLabel="Card Name">
+                    <rect key="frame" x="15" y="20" width="345" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="NFY-VP-mOY"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbi-zx-s7Z" userLabel="Categories">
+                    <rect key="frame" x="15" y="83" width="345" height="60"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqA-bG-y1f" userLabel="Sale">
+                    <rect key="frame" x="15" y="146" width="345" height="60"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nl2-lX-K5R">
+                    <rect key="frame" x="339" y="103" width="12" height="21"/>
+                    <state key="normal" backgroundImage="arrowRightInactive"/>
+                    <connections>
+                        <action selector="onChangeCategories:" destination="-1" eventType="touchUpInside" id="R09-tt-TST"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8ID-BU-rzk" firstAttribute="top" secondItem="bqA-bG-y1f" secondAttribute="bottom" constant="26" id="2eg-F3-een"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8ID-BU-rzk" secondAttribute="bottom" constant="391" id="96F-io-65s"/>
+                <constraint firstItem="Gcf-B1-OY6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9MD-Fm-UIg"/>
+                <constraint firstItem="cbi-zx-s7Z" firstAttribute="top" secondItem="Gcf-B1-OY6" secondAttribute="bottom" constant="3" id="BB3-s7-9g6"/>
+                <constraint firstItem="bqA-bG-y1f" firstAttribute="top" secondItem="Nl2-lX-K5R" secondAttribute="bottom" constant="22" id="CLQ-kZ-of5"/>
+                <constraint firstItem="cbi-zx-s7Z" firstAttribute="leading" secondItem="bqA-bG-y1f" secondAttribute="leading" id="Gyb-ym-I4X"/>
+                <constraint firstItem="cbi-zx-s7Z" firstAttribute="trailing" secondItem="bqA-bG-y1f" secondAttribute="trailing" id="Ksm-Kj-YFu"/>
+                <constraint firstItem="Gcf-B1-OY6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P61-ab-MmW"/>
+                <constraint firstItem="bqA-bG-y1f" firstAttribute="top" secondItem="cbi-zx-s7Z" secondAttribute="bottom" constant="3" id="P6D-9I-yG8"/>
+                <constraint firstItem="bqA-bG-y1f" firstAttribute="centerX" secondItem="8ID-BU-rzk" secondAttribute="centerX" id="VDO-Fm-MhQ"/>
+                <constraint firstItem="cbi-zx-s7Z" firstAttribute="baseline" secondItem="Nl2-lX-K5R" secondAttribute="firstBaseline" id="hUp-rw-dbm"/>
+                <constraint firstItem="Nl2-lX-K5R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="339" id="ha9-17-gwk"/>
+                <constraint firstItem="Gcf-B1-OY6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="m6u-pr-KBt"/>
+                <constraint firstItem="8ID-BU-rzk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="nsg-DT-82q"/>
+                <constraint firstItem="cbi-zx-s7Z" firstAttribute="centerY" secondItem="Nl2-lX-K5R" secondAttribute="centerY" id="rm1-qw-Wd7"/>
+                <constraint firstItem="Nl2-lX-K5R" firstAttribute="trailing" secondItem="8ID-BU-rzk" secondAttribute="trailing" id="uCX-pZ-pUM"/>
+                <constraint firstItem="Gcf-B1-OY6" firstAttribute="leading" secondItem="cbi-zx-s7Z" secondAttribute="leading" id="xJn-VY-fOX"/>
+                <constraint firstItem="Gcf-B1-OY6" firstAttribute="trailing" secondItem="cbi-zx-s7Z" secondAttribute="trailing" id="z8p-6X-coD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="52" y="81.409295352323838"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowRightInactive" width="12" height="21"/>
+        <image name="but-bg" width="326" height="44"/>
+    </resources>
+</document>

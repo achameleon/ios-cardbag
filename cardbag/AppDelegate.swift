@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  cardbag
+//  CardBag
 //
-//  Created by Anton Skorodumov on 26.10.2018.
-//  Copyright © 2018 E-Lite-Telecom. All rights reserved.
+//  Created by Admin on 12.10.2018.
+//  Copyright © 2018 arcMi. All rights reserved.
 //
 
 import UIKit
@@ -13,9 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    
+    func application(
+        _ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let viewController = EmptyPageViewController()
+        
+        let navigation = UINavigationController(rootViewController: viewController)
+        
+        window?.rootViewController = navigation
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
