@@ -20,9 +20,9 @@ class AddCardViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
     
         btnPhoto.setTitle("Сфотографировать", for: .normal)
-    cardName.setBottomBorder()
-    sale.setBottomBorder()
-    categories.setBottomBorder()
+//    cardName.setBottomBorder()
+//    sale.setBottomBorder()
+//    categories.setBottomBorder()
     cardName.placeholder = "Название карты"
     categories.placeholder = "Категория"
     sale.placeholder = "Скидка"
