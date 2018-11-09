@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sdk = VKSdk.initialize(withAppId: "6739379")
         sdk?.register(self)
         
-        let navigation = UINavigationController(rootViewController: OwnTableViewController())
+        let ownController = OwnConfigurator.controller()
+        let navigation = UINavigationController(rootViewController: ownController)
         
         window?.rootViewController = navigation
         
