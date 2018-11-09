@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843CA22F218C33EF00DB1294 /* CardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA22E218C33EF00DB1294 /* CardAPI.swift */; };
+		843CA231218C344900DB1294 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA230218C344900DB1294 /* Const.swift */; };
+		84860FA02195617D00EF0CBC /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84860F9D2195616700EF0CBC /* VKSdkFramework.framework */; };
+		84860FAB219561F100EF0CBC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84860FA6219561F000EF0CBC /* ProfileViewController.swift */; };
+		84860FAC219561F100EF0CBC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84860FA7219561F000EF0CBC /* ProfileViewController.xib */; };
+		84860FAD219561F100EF0CBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84860FA9219561F000EF0CBC /* LoginViewController.swift */; };
+		84860FAE219561F100EF0CBC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84860FAA219561F000EF0CBC /* LoginViewController.xib */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
@@ -17,7 +24,45 @@
 		CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE513AE21831E280018FCC7 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84860F982195616700EF0CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C7542D182133CC00964716;
+			remoteInfo = VKSdk;
+		};
+		84860F9A2195616700EF0CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BACC401865905B003158DA;
+			remoteInfo = VKSdkResources;
+		};
+		84860F9C2195616700EF0CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F34670311B8B7C5A003EF74B;
+			remoteInfo = VKSdkFramework;
+		};
+		84860F9E2195616700EF0CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C58CCD1D213B2C005E94B5;
+			remoteInfo = VKSdkTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		843CA22E218C33EF00DB1294 /* CardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAPI.swift; sourceTree = "<group>"; };
+		843CA230218C344900DB1294 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "VK-ios-sdk.xcodeproj"; path = "vk-ios-sdk-master/VK-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		84860FA6219561F000EF0CBC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		84860FA7219561F000EF0CBC /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		84860FA9219561F000EF0CBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84860FAA219561F000EF0CBC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84860FA02195617D00EF0CBC /* VKSdkFramework.framework in Frameworks */,
 				CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,9 +91,39 @@
 		4E4F7391081D2E5972DE6546 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */,
 				CEE513AE21831E280018FCC7 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84860F922195616700EF0CBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84860F992195616700EF0CBC /* libVKSdk.a */,
+				84860F9B2195616700EF0CBC /* VKSdkResources.bundle */,
+				84860F9D2195616700EF0CBC /* VKSdkFramework.framework */,
+				84860F9F2195616700EF0CBC /* VKSdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84860FA5219561F000EF0CBC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				84860FA6219561F000EF0CBC /* ProfileViewController.swift */,
+				84860FA7219561F000EF0CBC /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		84860FA8219561F000EF0CBC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84860FA9219561F000EF0CBC /* LoginViewController.swift */,
+				84860FAA219561F000EF0CBC /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CE30C7992182FD11004FD699 = {
@@ -70,6 +146,8 @@
 		CE30C7A42182FD11004FD699 /* cardbag */ = {
 			isa = PBXGroup;
 			children = (
+				84860FA8219561F000EF0CBC /* Login */,
+				84860FA5219561F000EF0CBC /* Profile */,
 				CE30C7A52182FD11004FD699 /* AppDelegate.swift */,
 				CEE513A7218311720018FCC7 /* CustomCell.swift */,
 				CEE513A8218311720018FCC7 /* CustomCell.xib */,
@@ -78,6 +156,8 @@
 				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
 				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
 				CE30C7B12182FD14004FD699 /* Info.plist */,
+				843CA22E218C33EF00DB1294 /* CardAPI.swift */,
+				843CA230218C344900DB1294 /* Const.swift */,
 			);
 			path = cardbag;
 			sourceTree = "<group>";
@@ -129,12 +209,49 @@
 			mainGroup = CE30C7992182FD11004FD699;
 			productRefGroup = CE30C7A32182FD11004FD699 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84860F922195616700EF0CBC /* Products */;
+					ProjectRef = 84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CE30C7A12182FD11004FD699 /* cardbag */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84860F992195616700EF0CBC /* libVKSdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVKSdk.a;
+			remoteRef = 84860F982195616700EF0CBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84860F9B2195616700EF0CBC /* VKSdkResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkResources.bundle;
+			remoteRef = 84860F9A2195616700EF0CBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84860F9D2195616700EF0CBC /* VKSdkFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VKSdkFramework.framework;
+			remoteRef = 84860F9C2195616700EF0CBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84860F9F2195616700EF0CBC /* VKSdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkTests.xctest;
+			remoteRef = 84860F9E2195616700EF0CBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE30C7A02182FD11004FD699 /* Resources */ = {
@@ -143,7 +260,9 @@
 			files = (
 				CEE513AC218311720018FCC7 /* CustomCell.xib in Resources */,
 				CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */,
+				84860FAE219561F100EF0CBC /* LoginViewController.xib in Resources */,
 				CEE513AD218311720018FCC7 /* OwnTableViewController.xib in Resources */,
+				84860FAC219561F100EF0CBC /* ProfileViewController.xib in Resources */,
 				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,9 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84860FAD219561F100EF0CBC /* LoginViewController.swift in Sources */,
+				84860FAB219561F100EF0CBC /* ProfileViewController.swift in Sources */,
+				843CA22F218C33EF00DB1294 /* CardAPI.swift in Sources */,
 				CEE513AA218311720018FCC7 /* OwnTableViewController.swift in Sources */,
 				CEE513AB218311720018FCC7 /* CustomCell.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
+				843CA231218C344900DB1294 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

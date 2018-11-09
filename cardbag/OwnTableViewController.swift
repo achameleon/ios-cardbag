@@ -8,7 +8,30 @@
 
 import UIKit
 import Alamofire
-
+struct categoryItem : Codable{
+    var id: Int = 0
+    var title: String = ""
+    
+    /*init?(map: AnyObject?) {
+        guard let map = map as? [String:AnyObject] else {return nil}
+        id = map["id"] as? Int ?? 0
+        title = map["title"] as? String ?? ""
+    }*/
+    
+}
+struct categoryList: Codable {
+    var categoryList: [categoryItem] = []
+    /*init?(map: AnyObject?) {
+        guard let map = map as? [AnyObject] else { return nil}
+        categoryList=[]
+        for mapItem in map {
+            guard let mappedItem = categoryItem(map: mapItem) else {continue}
+            categoryList.append(mappedItem)
+            
+        }
+        
+    }*/
+}
 struct TestData {
     
     var userId: Int = 0
@@ -39,11 +62,17 @@ class OwnTableViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     
-        let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
-        Alamofire.request(url).responseJSON { (response) in
-            if let d = response.result.value as? [String: AnyObject] {
-                let object = TestData(map: d)
-                object.show()
+        
+        Alamofire.request(CardAPI.categoryList.url).responseJSON { (response) in
+            if let d = response.data {
+                do {
+                    let object = try JSONDecoder().decode(categoryList.self, from: d)
+                    print(object.categoryList.count)
+                }
+                catch {
+                    print(error)
+                }
+                
             }
         }
     

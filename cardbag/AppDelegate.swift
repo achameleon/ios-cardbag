@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let navigation = UINavigationController(rootViewController: OwnTableViewController())
+        //let navigation = UINavigationController(rootViewController: OwnTableViewController())
         
-        window?.rootViewController = navigation
+        let navigationMy = UINavigationController(rootViewController: LoginViewController())
+        
+        window?.rootViewController = navigationMy
         
         window?.makeKeyAndVisible()
         
