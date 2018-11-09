@@ -4,12 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="CardBag" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="cardbag" customModuleProvider="target">
             <connections>
                 <outlet property="b_facebook" destination="maM-HU-GZ1" id="jDG-IG-2gA"/>
                 <outlet property="b_google" destination="9Mr-NR-w2g" id="AJT-r5-aYJ"/>
@@ -73,12 +74,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OQ4-S8-5Us" secondAttribute="trailing" constant="39.5" id="13S-kt-6O9"/>
                 <constraint firstItem="m8y-Nb-po1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="14G-UH-eqc"/>
                 <constraint firstItem="T5F-Ks-6UY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9Ti-gY-ZUa"/>
                 <constraint firstItem="9Mr-NR-w2g" firstAttribute="leading" secondItem="fPT-2Q-92N" secondAttribute="trailing" constant="12" id="Kxd-e7-Si0"/>
+                <constraint firstItem="m8y-Nb-po1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23.5" id="NsW-Fz-Fl9"/>
                 <constraint firstItem="maM-HU-GZ1" firstAttribute="top" secondItem="m8y-Nb-po1" secondAttribute="bottom" constant="14" id="OqI-Y2-NAc"/>
                 <constraint firstItem="T5F-Ks-6UY" firstAttribute="top" secondItem="OQ4-S8-5Us" secondAttribute="bottom" constant="14" id="U8M-Jr-sjH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m8y-Nb-po1" secondAttribute="trailing" constant="23.5" id="VhO-no-NWx"/>
                 <constraint firstItem="OQ4-S8-5Us" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="i3k-tR-cMz"/>
+                <constraint firstItem="OQ4-S8-5Us" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39.5" id="jjg-Gq-94l"/>
                 <constraint firstItem="9Mr-NR-w2g" firstAttribute="top" secondItem="m8y-Nb-po1" secondAttribute="bottom" constant="14" id="mdj-jp-yU1"/>
                 <constraint firstItem="fPT-2Q-92N" firstAttribute="leading" secondItem="maM-HU-GZ1" secondAttribute="trailing" constant="12" id="oaQ-e8-xDs"/>
                 <constraint firstItem="fPT-2Q-92N" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pmL-YX-GMH"/>

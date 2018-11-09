@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         VKSdk.wakeUpSession(scope, complete: {
             (state: VKAuthorizationState, error: Error?) -> Void
             in if state == .authorized {
-                print("authorized??")
+                print("authorized")
             }
             else {
                 print("need to auth")
