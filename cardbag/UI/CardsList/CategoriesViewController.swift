@@ -14,6 +14,8 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tblCategories: UITableView!
     
     var categArray = [TestData]()
+    var filteredCategories = [TestData]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     struct TestData {
         
@@ -29,20 +31,38 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categArray.count
+        return filteredCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
-        cell.textF.text = categArray[indexPath.row].title
+        let categ: TestData
+        categ = filteredCategories[indexPath.row]
+        cell.textF.text = categ.title
         return cell
     }
     
     func setupSearchBar() {
-        let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Поиск категории"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+    }
+    
+    func searchBarIsEmpty()	-> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filteredContentForSearchText(_ searchText: String) {
+        filteredCategories = categArray.filter({(categ: TestData) -> Bool in
+            return categ.title.contains(searchText)
+        })
+        
+        tblCategories.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
     
     override func viewDidLoad() {
@@ -59,6 +79,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
                 for i in 0..<d.count {
                     let object = TestData(map: d[i])
                     self.categArray.append(object)
+                    self.filteredCategories.append(object)
                     self.tblCategories.reloadData()
                 }
             }
@@ -78,4 +99,24 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     */
     
 
+}
+
+extension CategoriesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+
+extension CategoriesViewController: UISearchBarDelegate {
+ 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        filteredCategories = categArray.filter({(categ: TestData) -> Bool in
+            return categ.title.contains(searchText)
+        })
+        
+        tblCategories.reloadData()
+    }
+    
 }
