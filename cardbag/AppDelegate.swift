@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
         ) -> Bool {
         window = UIWindow(frame:UIScreen.main.bounds)
-        let viewController = CardsListViewController()
+        let viewController = TableViewController()
         let Navigation = UINavigationController(rootViewController: viewController)
         window?.rootViewController = Navigation
         window?.makeKeyAndVisible()

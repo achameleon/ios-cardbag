@@ -23,8 +23,8 @@ class CardsListViewController: UIViewController {
     
     @IBOutlet weak var Prob: UILabel!
 
-    
     var cards:[Card] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,17 +55,15 @@ class CardsListViewController: UIViewController {
     {        /*let vc = UIViewController()
         vc.view.frame.size = view.frame.size
         present(vc, animated: false, completion: nil)*/
-        Alamofire.request("http://cardbag.ru/api/cards").responseJSON { response in
+        Alamofire.request("http://cardbag.ru/api/cards").responseJSON { [weak self] response in
             var a: [AnyObject]?
             a = response.result.value as? [AnyObject]
             if let c = a {
                 for i in c {
-                    self.cards.append(Card(a: i))
+                    self?.cards.append(Card(a: i))
                 }
             }
-            
         }
-        
     }
     
     @objc private func addCard()

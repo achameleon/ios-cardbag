@@ -11,8 +11,8 @@ import Foundation
 
 class Category
 {
-    var id: Int
-    var title: String
+    var id: Int = 0
+    var title: String = ""
     init ( a:Any )
     {
         guard let b = a as? [String:Any] else
