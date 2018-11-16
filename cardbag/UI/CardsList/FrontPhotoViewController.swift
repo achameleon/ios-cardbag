@@ -8,7 +8,20 @@
 
 import UIKit
 
-class FrontPhotoViewController: UIViewController {
+class FrontPhotoViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+        lbl.text = "user canceled"
+        paymentViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+        if let info = cardInfo {
+            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+            lbl.text = str as String
+        }
+        paymentViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnPhoto: UIButton!
@@ -32,6 +45,12 @@ class FrontPhotoViewController: UIViewController {
     
     @IBAction func onChangeBtn(_ sender: Any) {
         nextPage()
+    }
+    
+    @IBAction func makePhoto(_ sender: Any) {
+        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
+        cardIOVC?.modalPresentationStyle = .formSheet
+        present(cardIOVC!, animated: true, completion: nil)
     }
     
     func nextPage() {

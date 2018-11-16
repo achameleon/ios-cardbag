@@ -38,6 +38,9 @@
                         <constraint firstAttribute="height" constant="93" id="YSq-FM-dUq"/>
                     </constraints>
                     <state key="normal" backgroundImage="Photo"/>
+                    <connections>
+                        <action selector="makePhoto:" destination="-1" eventType="touchUpInside" id="zQY-AG-pbe"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smV-3j-RY7">
                     <rect key="frame" x="186" y="305" width="42" height="21"/>

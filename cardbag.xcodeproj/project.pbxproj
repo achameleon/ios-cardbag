@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0FDB7F45218B56330099B17A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDB7F53219ECAFE0099B17A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		1FD4FB2D51FAB5DC668AE9A7 /* Pods-CardBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardBag/Pods-CardBag.debug.xcconfig"; sourceTree = "<group>"; };
 		8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPageViewController.swift; sourceTree = "<group>"; };
 		8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPageViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8449B06421704C5D00191D89 /* AppDelegate.swift */,
+				0FDB7F53219ECAFE0099B17A /* Header.h */,
 				8449B07621704D9E00191D89 /* Resources */,
 				8449B07721704DD900191D89 /* UI */,
 			);
@@ -426,6 +428,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CardBag/Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +449,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CardBag/Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
