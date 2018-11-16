@@ -8,19 +8,23 @@
 
 import UIKit
 
-class FrontPhotoViewController: UIViewController, CardIOPaymentViewControllerDelegate {
-    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
-        lbl.text = "user canceled"
-        paymentViewController?.dismiss(animated: true, completion: nil)
+class FrontPhotoViewController: UIViewController, CardIOViewDelegate {
+    func cardIOView(_ cardIOView: CardIOView!, didScanCard cardInfo: CardIOCreditCardInfo!) {
+        
     }
     
-    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
-        if let info = cardInfo {
-            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-            lbl.text = str as String
-        }
-        paymentViewController?.dismiss(animated: true, completion: nil)
-    }
+//    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+//        lbl.text = "user canceled"
+//        paymentViewController?.dismiss(animated: true, completion: nil)
+//    }
+//
+//    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+//        if let info = cardInfo {
+//            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+//            lbl.text = str as String
+//        }
+//        paymentViewController?.dismiss(animated: true, completion: nil)
+//    }
     
     
     @IBOutlet weak var btnNext: UIButton!
@@ -48,9 +52,11 @@ class FrontPhotoViewController: UIViewController, CardIOPaymentViewControllerDel
     }
     
     @IBAction func makePhoto(_ sender: Any) {
-        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
-        cardIOVC?.modalPresentationStyle = .formSheet
-        present(cardIOVC!, animated: true, completion: nil)
+        let cardIOVC = CardIOView(frame: view.frame)
+        cardIOVC.delegate = self
+        var makePhoto = UIViewController()
+        makePhoto.view = cardIOVC
+        present(makePhoto, animated: true, completion: nil)
     }
     
     func nextPage() {
