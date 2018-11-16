@@ -41,18 +41,11 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     
     func searchbar(){
         
-        //let searchController = UISearchController(searchResultsController: nil)
-        //navigationItem.searchController = searchController
-        //navigationItem.hidesSearchBarWhenScrolling = false
-        let searchBar = UISearchBar()
-        searchBar.showsCancelButton = false
-        searchBar.placeholder = "Поиск карты или категории"
-        searchBar.frame = CGRect(x: 0, y: 100, width: (navigationController?.view.bounds.size.width)!, height: 32)
-        searchBar.barTintColor = .white
-        //      searchBar.
-        view.addSubview(searchBar)
-        searchBar.delegate = self
-        // self.navigationItem.titleView = searchBar
+        let searchBar = UISearchController(searchResultsController: nil)
+        searchBar.searchBar.placeholder = "Поиск карты или категории"
+        navigationItem.searchController = searchBar
+        navigationItem.hidesSearchBarWhenScrolling = false
+       
     }
     
     override func viewDidLoad() {

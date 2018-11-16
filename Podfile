@@ -6,6 +6,7 @@ target 'CardBag' do
  
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
+pod 'CardIO'
 
   # Pods for CardBag
 

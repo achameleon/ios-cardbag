@@ -10,8 +10,6 @@
 		1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB770218194D700E647FD /* RearPhotoViewController.xib */; };
 		1F060BB021885B6700FE0212 /* AddFirstCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F060BAE21885B6700FE0212 /* AddFirstCardViewController.swift */; };
 		1F060BB121885B6700FE0212 /* AddFirstCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F060BAF21885B6700FE0212 /* AddFirstCardViewController.xib */; };
-		1F060BB82188CF0C00FE0212 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F060BB62188CF0C00FE0212 /* PhotoViewController.swift */; };
-		1F060BB92188CF0C00FE0212 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F060BB72188CF0C00FE0212 /* PhotoViewController.xib */; };
 		1F792F202195E39400AC4EA2 /* AddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F792F1F2195E39400AC4EA2 /* AddCardViewController.xib */; };
 		1F792F242195FB3800AC4EA2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F792F232195FB3800AC4EA2 /* Alamofire.framework */; };
 		8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */; };
@@ -33,12 +31,11 @@
 /* Begin PBXFileReference section */
 		1F060BAE21885B6700FE0212 /* AddFirstCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFirstCardViewController.swift; sourceTree = "<group>"; };
 		1F060BAF21885B6700FE0212 /* AddFirstCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFirstCardViewController.xib; sourceTree = "<group>"; };
-		1F060BB62188CF0C00FE0212 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		1F060BB72188CF0C00FE0212 /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		1F792F1D219581E400AC4EA2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F792F1F2195E39400AC4EA2 /* AddCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardViewController.xib; sourceTree = "<group>"; };
 		1F792F212195FAD800AC4EA2 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		1F792F232195FB3800AC4EA2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F792F25219ECB1B00AC4EA2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		7D6A1B7A553D757BBF720123 /* Pods_CardBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPageViewController.swift; sourceTree = "<group>"; };
 		8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPageViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8449B06421704C5D00191D89 /* AppDelegate.swift */,
+				1F792F25219ECB1B00AC4EA2 /* Header.h */,
 				8449B07621704D9E00191D89 /* Resources */,
 				8449B07721704DD900191D89 /* UI */,
 			);
@@ -156,8 +154,6 @@
 				84FCB7732182034800E647FD /* CategoriesViewController.xib */,
 				1F060BAE21885B6700FE0212 /* AddFirstCardViewController.swift */,
 				1F060BAF21885B6700FE0212 /* AddFirstCardViewController.xib */,
-				1F060BB62188CF0C00FE0212 /* PhotoViewController.swift */,
-				1F060BB72188CF0C00FE0212 /* PhotoViewController.xib */,
 			);
 			path = CardsList;
 			sourceTree = "<group>";
@@ -224,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */,
-				1F060BB92188CF0C00FE0212 /* PhotoViewController.xib in Resources */,
 				1F792F202195E39400AC4EA2 /* AddCardViewController.xib in Resources */,
 				8421CE1C2177B54E00C469C5 /* EmptyPageViewController.xib in Resources */,
 				8449B06F21704C6900191D89 /* LaunchScreen.storyboard in Resources */,
@@ -295,7 +290,6 @@
 				1F060BB021885B6700FE0212 /* AddFirstCardViewController.swift in Sources */,
 				84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */,
 				84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */,
-				1F060BB82188CF0C00FE0212 /* PhotoViewController.swift in Sources */,
 				8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */,
 				84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */,
 				8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */,
@@ -446,6 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CardBag/Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcMi.CardBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CardBag/Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
