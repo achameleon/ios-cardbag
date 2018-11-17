@@ -53,18 +53,6 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filteredContentForSearchText(_ searchText: String) {
-        filteredCategories = categArray.filter({(categ: TestData) -> Bool in
-            return categ.title.contains(searchText)
-        })
-        
-        tblCategories.reloadData()
-    }
-    
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib.init(nibName: "MyCustomCell", bundle: nil)
@@ -101,22 +89,18 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
 
 }
 
-extension CategoriesViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filteredContentForSearchText(searchController.searchBar.text!)
-    }
-}
-
 
 extension CategoriesViewController: UISearchBarDelegate {
  
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        filteredCategories = categArray.filter({(categ: TestData) -> Bool in
-            return categ.title.contains(searchText)
-        })
-        
+        if searchBarIsEmpty() {
+            filteredCategories = categArray
+        } else {
+            filteredCategories = categArray.filter({(categ: TestData) -> Bool in
+                return categ.title.lowercased().contains(searchText.lowercased())
+            })
+            searchController.searchBar.text = searchText
+        }
         tblCategories.reloadData()
     }
-    
 }
