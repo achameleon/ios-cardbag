@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import VKSdkFramework
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,6 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        return true
+    }
+    
+    /*func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        VKSdk.processOpen(url, fromApplication: options.sou)
+    }*/
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        VKSdk.processOpen(url, fromApplication: sourceApplication)
         return true
     }
 

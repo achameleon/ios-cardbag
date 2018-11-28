@@ -16,6 +16,7 @@
                 <outlet property="b_google" destination="9Mr-NR-w2g" id="AJT-r5-aYJ"/>
                 <outlet property="b_phone" destination="T5F-Ks-6UY" id="NTY-SZ-yKl"/>
                 <outlet property="b_vk" destination="fPT-2Q-92N" id="WGJ-fA-n5A"/>
+                <outlet property="lb_test" destination="5r7-uu-8BW" id="TJd-7V-sJX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,6 +72,13 @@
                     </constraints>
                     <state key="normal" backgroundImage="Login"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-uu-8BW">
+                    <rect key="frame" x="166" y="369" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
