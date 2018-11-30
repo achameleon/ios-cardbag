@@ -15,10 +15,10 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     let secret_key = "LfcFkItvmzgmTXCD5leu"
     let sdkInstance = VKSdk.initialize(withAppId: "6378335")
     let api_url = "http://cardbag.ru/api"
+    var vk_token: String = ""
     var uuid:String=""
-    var vk_token : String = ""
-    var vk_token_defaults=""
-    @IBOutlet weak var lb_test: UILabel!
+    var access_token: String = ""
+    var refresh_token: String = ""
     @IBOutlet weak var b_phone: UIButton!
     @IBOutlet weak var b_facebook: UIButton!
     @IBOutlet weak var b_vk: UIButton!
@@ -28,22 +28,18 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        vk_token_defaults=UserDefaults.standard.string(forKey: "vktoken") ?? ""
-        /*if vk_token_defaults != "" {
-            print("vk token from defaults = \(vk_token_defaults)")
-        }*/
-        //getAccesToken()
-        // Do any additional setup after loading the view.
+        access_token = UserDefaults.standard.string(forKey: "accesstoken") ?? ""
+        refresh_token = UserDefaults.standard.string(forKey: "refreshtoken") ?? ""
     }
+    
     private func loginVK() {
         
         sdkInstance?.register(self)
         sdkInstance?.uiDelegate=self
         VKSdk.wakeUpSession(scope, complete: {
             (state: VKAuthorizationState, error: Error?) -> Void
-            in if state == .authorized /*|| self.vk_token_defaults != ""*/{
-                print("authorized with vk token\(self.vk_token_defaults)")
-                self.userAccessToken(token: self.vk_token_defaults)
+            in if state == .authorized || (self.access_token != "" && self.refresh_token != ""){
+                
             }
             else {
                 print("need to auth")
@@ -52,42 +48,7 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
             return
         })
     }
-    func vkSdkAccessAuthorizationFinishedWithResult(result:VKAuthorizationResult?) -> Void {
-        if ((result?.token) != nil) {
-            vk_token = (result?.token.accessToken)!
-            print("user token: \(vk_token)")
-            uuid=(result?.token.userId)!
-            userAccessToken(token: vk_token)
-        }
-        else if ((result?.error) != nil) {
-            let error_text = result?.error.debugDescription
-            print("authorization failed with error: \(String(describing: error_text))")
-        }
-    }
     
-    func vkSdkUserAuthorizationFailed() -> Void {
-        
-    }
-    
-    func vkSdkAccessTokenUpdated(newToken:VKAccessToken?, oldToken:VKAccessToken?) -> Void {
-        
-    }
-    
-    
-    func vkSdkShouldPresentViewController(controller:UIViewController?) -> Void {
-        
-    }
-    func vkSdkShouldPresent(_ controller: UIViewController!) {
-        guard let controller = controller
-            else {
-                return
-        }
-        present(controller, animated: true, completion: nil)
-    }
-    
-    func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
-        
-    }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if ((result?.token) != nil) {
@@ -122,23 +83,89 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     
     func userAccessToken(token: String) {
         let requestString = api_url + "/user/token"
-        //self.uuid = NSUUID().uuidString
         let parameters = [
             "uid": uuid,
             "token": token,
-            "network_id": "0"]
-        //let headers = [:]
+        "network_id": 1] as [String: Any]
         Alamofire.request(requestString, method: .post, parameters: parameters, headers: [:]).responseJSON(completionHandler: {
-            response in
+            response
+            in switch response.result {
+            case .success(let JSON):
+                print("Success with JSON: \(JSON)")
+                
+                let response = JSON as! [String:AnyObject]
+                
+                self.access_token = response["access_token"] as! String
+                UserDefaults.standard.set(self.access_token, forKey: "accesstoken")
+                self.refresh_token = response["refresh_token"] as! String
+                UserDefaults.standard.set(self.refresh_token, forKey: "refreshtoken")
+                self.uuid = response["uid"] as! String
+                self.userRefreshToken(token: self.refresh_token)
+            case .failure(let error):
+                print("Request failed with error: \(error)")
+                
+            }
             
-            print(response.result)
-            print("response result value: \(response.result.value as Any)")
-            print("response data: \(response.data as Any)")
-            print("response error: \(response.error as Any)")
-            //print(response.result.error as Any)
-            //print(response.result.value as Any)
-            self.lb_test.text = response.result.value as? String
+            
         })
+    }
+    func userRefreshToken(token: String) {
+        let requestString = api_url + "/token/refresh"
+        let parameters = [
+            "network_id": 1,
+            "token": token,
+            "uid": uuid
+            ] as [String: Any]
+       
+        
+        Alamofire.request(requestString, method: .post, parameters: parameters, headers: nil).responseJSON(completionHandler: {
+            response
+            in switch response.result {
+            case .success(let JSON):
+                print("Success with JSON: \(JSON)")
+                
+                let response = JSON as! [String:AnyObject]
+                
+                self.access_token = response["access_token"] as! String
+                UserDefaults.standard.set(self.access_token, forKey: "accesstoken")
+                self.refresh_token = response["refresh_token"] as! String
+                UserDefaults.standard.set(self.refresh_token, forKey: "refreshtoken")
+              
+            case .failure(let error):
+                print("Request failed with error: \(error)")
+            }
+            
+            
+        })
+    }
+    
+    
+    func vkSdkAccessAuthorizationFinishedWithResult(result:VKAuthorizationResult?) -> Void {
+        
+    }
+    
+    func vkSdkUserAuthorizationFailed() -> Void {
+        
+    }
+    
+    func vkSdkAccessTokenUpdated(newToken:VKAccessToken?, oldToken:VKAccessToken?) -> Void {
+        
+    }
+    
+    
+    func vkSdkShouldPresentViewController(controller:UIViewController?) -> Void {
+        
+    }
+    func vkSdkShouldPresent(_ controller: UIViewController!) {
+        guard let controller = controller
+            else {
+                return
+        }
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
+        
     }
     /*
     // MARK: - Navigation
