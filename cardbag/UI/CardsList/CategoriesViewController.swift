@@ -9,27 +9,22 @@
 import UIKit
 import Alamofire
 
+protocol CategoriesChangeDelegate: class {
+    
+    func provideCategory(item: TestData)
+    
+}
+
 class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tblCategories: UITableView!
+    
+    var delegate: CategoriesChangeDelegate?
     
     var categArray = [TestData]()
     var filteredCategories = [TestData]()
     let searchController = UISearchController(searchResultsController: nil)
     var searchField: String = ""
-    
-    struct TestData {
-        
-        var id = 0
-        var title: String = ""
-        let p = CategoriesViewController()
-        
-        init (map: AnyObject) {
-            id = map["id"] as! Int
-            title = map["title"] as! String
-        }
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredCategories.count
@@ -37,10 +32,17 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
-        let categ: TestData
+        let categ: TestData!
         categ = filteredCategories[indexPath.row]
         cell.textF.text = categ.title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cat = indexPath
+        let object = filteredCategories[indexPath.row]
+        delegate?.provideCategory(item: object)
+        navigationController?.popViewController(animated: true)
     }
     
     func setupSearchBar() {
@@ -110,3 +112,4 @@ extension CategoriesViewController: UISearchBarDelegate {
     }
     
 }
+

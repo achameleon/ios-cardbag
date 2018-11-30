@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class AddCardViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var btnPhoto: UIButton!
@@ -45,11 +47,13 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
 
     func categoriesPage() {
         let categoriesPage = CategoriesViewController()
+        categoriesPage.delegate = self
         navigationController?.pushViewController(categoriesPage, animated: true)
     }
     
     @objc func myTargetFunction(textField: UITextField) {
         let categoriesPage = CategoriesViewController()
+        categoriesPage.delegate = self
         navigationController?.pushViewController(categoriesPage, animated: true)        
     }
 
@@ -63,6 +67,15 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension AddCardViewController: CategoriesChangeDelegate {
+    
+    func provideCategory(item: TestData) {
+        print(item.title)
+        categories.text = item.title
+    }
+    
 }
 
 extension UITextField {
