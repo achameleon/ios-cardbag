@@ -16,6 +16,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     var categArray = [TestData]()
     var filteredCategories = [TestData]()
     let searchController = UISearchController(searchResultsController: nil)
+    var searchField: String = ""
     
     struct TestData {
         
@@ -93,14 +94,19 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
 extension CategoriesViewController: UISearchBarDelegate {
  
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchField = searchText
         if searchBarIsEmpty() {
             filteredCategories = categArray
         } else {
             filteredCategories = categArray.filter({(categ: TestData) -> Bool in
                 return categ.title.lowercased().contains(searchText.lowercased())
             })
-            searchController.searchBar.text = searchText
         }
         tblCategories.reloadData()
     }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchController.searchBar.text = searchField
+    }
+    
 }
