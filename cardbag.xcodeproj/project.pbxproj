@@ -10,6 +10,9 @@
 		2A1CD31AD96BEE05F5DB279E /* Pods_cardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E436781D825058630C24CB6 /* Pods_cardbag.framework */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
+		CE866F7C21B12CBD00F146F6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE866F7B21B12CBD00F146F6 /* RealmService.swift */; };
+		CE866F7F21B12CE900F146F6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE866F7D21B12CE900F146F6 /* RealmSwift.framework */; };
+		CE866F8021B12CE900F146F6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE866F7E21B12CE900F146F6 /* Realm.framework */; };
 		CE891B7E2195906200897714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE891B7D2195906200897714 /* LaunchScreen.storyboard */; };
 		CE891B812195908600897714 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE891B7F2195908600897714 /* Localizable.strings */; };
 		CE891B842195924400897714 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891B832195924400897714 /* Global.swift */; };
@@ -21,6 +24,7 @@
 		CE891B9E2195A06700897714 /* OwnConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891B9D2195A06700897714 /* OwnConfigurator.swift */; };
 		CE891BA02195A16000897714 /* OwnTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891B9F2195A16000897714 /* OwnTableViewInput.swift */; };
 		CE891BA22195A16900897714 /* OwnTableViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891BA12195A16900897714 /* OwnTableViewOutput.swift */; };
+		CE9B0ED021B13226006F0BEF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B0ECF21B13226006F0BEF /* Category.swift */; };
 		CEC354BB218C469400AD7CFE /* CardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BA218C469400AD7CFE /* CardAPI.swift */; };
 		CEC354BD218C475F00AD7CFE /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BC218C475F00AD7CFE /* Const.swift */; };
 		CEC354BF218C591B00AD7CFE /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC354BE218C591B00AD7CFE /* KeyStorage.swift */; };
@@ -40,6 +44,9 @@
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE30C7B12182FD14004FD699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE866F7B21B12CBD00F146F6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		CE866F7D21B12CE900F146F6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		CE866F7E21B12CE900F146F6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		CE891B7D2195906200897714 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE891B802195908600897714 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE891B822195909000897714 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 		CE891B9D2195A06700897714 /* OwnConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnConfigurator.swift; sourceTree = "<group>"; };
 		CE891B9F2195A16000897714 /* OwnTableViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTableViewInput.swift; sourceTree = "<group>"; };
 		CE891BA12195A16900897714 /* OwnTableViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTableViewOutput.swift; sourceTree = "<group>"; };
+		CE9B0ECF21B13226006F0BEF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CEC354BA218C469400AD7CFE /* CardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAPI.swift; sourceTree = "<group>"; };
 		CEC354BC218C475F00AD7CFE /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		CEC354BE218C591B00AD7CFE /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
@@ -68,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE866F7F21B12CE900F146F6 /* RealmSwift.framework in Frameworks */,
+				CE866F8021B12CE900F146F6 /* Realm.framework in Frameworks */,
 				CEC354C1218C623600AD7CFE /* VKSdkFramework.framework in Frameworks */,
 				CEE513AF21831E280018FCC7 /* Alamofire.framework in Frameworks */,
 				2A1CD31AD96BEE05F5DB279E /* Pods_cardbag.framework in Frameworks */,
@@ -89,6 +99,8 @@
 		4E4F7391081D2E5972DE6546 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE866F7E21B12CE900F146F6 /* Realm.framework */,
+				CE866F7D21B12CE900F146F6 /* RealmSwift.framework */,
 				CEC354C0218C623600AD7CFE /* VKSdkFramework.framework */,
 				CEE513AE21831E280018FCC7 /* Alamofire.framework */,
 				2E436781D825058630C24CB6 /* Pods_cardbag.framework */,
@@ -129,8 +141,17 @@
 				CE891B832195924400897714 /* Global.swift */,
 				CE891B7F2195908600897714 /* Localizable.strings */,
 				CE891B872195941600897714 /* R.generated.swift */,
+				CE866F7B21B12CBD00F146F6 /* RealmService.swift */,
 			);
 			path = cardbag;
+			sourceTree = "<group>";
+		};
+		CE866F8121B12D4500F146F6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B0ECF21B13226006F0BEF /* Category.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		CE891B8921959BD400897714 /* OwnTable */ = {
@@ -184,6 +205,7 @@
 		CE891B9121959D0F00897714 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE866F8121B12D4500F146F6 /* Category */,
 				CE891B9221959D1F00897714 /* CategoryItem.swift */,
 				CE891B9421959D3700897714 /* CategoryList.swift */,
 			);
@@ -329,13 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "R.Swift Run Script";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +368,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = "Carthage Run Script";
 			outputPaths = (
@@ -394,10 +414,12 @@
 				CEC354BD218C475F00AD7CFE /* Const.swift in Sources */,
 				CEC354BF218C591B00AD7CFE /* KeyStorage.swift in Sources */,
 				CE891B842195924400897714 /* Global.swift in Sources */,
+				CE9B0ED021B13226006F0BEF /* Category.swift in Sources */,
 				CE891B9C21959DE500897714 /* CategoryRepository.swift in Sources */,
 				CE891B9321959D1F00897714 /* CategoryItem.swift in Sources */,
 				CE891BA22195A16900897714 /* OwnTableViewOutput.swift in Sources */,
 				CE891B9021959CF100897714 /* OwnPresenter.swift in Sources */,
+				CE866F7C21B12CBD00F146F6 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.goodline.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -571,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.goodline.cardbag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
