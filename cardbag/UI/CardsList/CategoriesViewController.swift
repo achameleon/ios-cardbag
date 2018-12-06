@@ -39,7 +39,6 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cat = indexPath
         let object = filteredCategories[indexPath.row]
         delegate?.provideCategory(item: object)
         navigationController?.popViewController(animated: true)

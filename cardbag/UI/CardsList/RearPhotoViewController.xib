@@ -15,6 +15,7 @@
                 <outlet property="lbl" destination="smV-3j-RY7" id="krA-tr-gLJ"/>
                 <outlet property="lblCategories" destination="gU9-ng-5Qt" id="xDw-Gf-2Y2"/>
                 <outlet property="lblSale" destination="G5k-pi-kas" id="zw2-6A-i7E"/>
+                <outlet property="myImageView" destination="oIZ-Yp-bBS" id="HGg-bo-1Vj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="2Uk-aK-Xwx"/>
             </connections>
         </placeholder>
@@ -37,6 +38,9 @@
                         <constraint firstAttribute="height" constant="93" id="YSq-FM-dUq"/>
                     </constraints>
                     <state key="normal" backgroundImage="Photo"/>
+                    <connections>
+                        <action selector="makePhoto:" destination="-1" eventType="touchUpInside" id="TJQ-Ke-EC6"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smV-3j-RY7">
                     <rect key="frame" x="186" y="305" width="42" height="21"/>

@@ -8,12 +8,29 @@
 
 import UIKit
 
-class RearPhotoViewController: UIViewController {
+class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var lbl: UILabel!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var lblCategories: UILabel!
     @IBOutlet weak var lblSale: UILabel!
+    @IBOutlet weak var myImageView: UIImageView!
+    
+    @IBAction func makePhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
+            let imag = UIImagePickerController()
+            imag.delegate = self
+            imag.sourceType = UIImagePickerController.SourceType.camera;
+            imag.allowsEditing = false
+            self.present(imag, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!) {
+        let selectedImage : UIImage = image
+        myImageView.image = selectedImage
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +42,11 @@ class RearPhotoViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.title = "Спортмастер"        // Do any additional setup after loading the view.
     }
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     /*
     // MARK: - Navigation
 
