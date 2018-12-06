@@ -9,5 +9,6 @@ target 'CardBag' do
 
 pod 'Alamofire', '~> 4.7'
 pod 'CardIO'
+pod 'RealmSwift'
 
 end
