@@ -17,6 +17,11 @@ class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var myImageView: UIImageView!
     
     @IBAction func makePhoto(_ sender: Any) {
+//        let myPickerController = UIImagePickerController()
+//        myPickerController.delegate = self;
+//        myPickerController.sourceType = UIImagePickerController.SourceType.camera
+//        
+//        self.present(myPickerController, animated: true, completion: nil)
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
             let imag = UIImagePickerController()
             imag.delegate = self
