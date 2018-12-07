@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840EAFE821949FA2005E3102 /* AddCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFE721949FA2005E3102 /* AddCardsViewController.swift */; };
-		840EAFEA21949FB9005E3102 /* AddCardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFE921949FB9005E3102 /* AddCardsViewController.xib */; };
 		840EAFED21949FFE005E3102 /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFEC21949FFE005E3102 /* CardsListViewController.swift */; };
 		840EAFEF2194A004005E3102 /* CardsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFEE2194A004005E3102 /* CardsListViewController.xib */; };
 		840EAFF22194A111005E3102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840EAFF12194A111005E3102 /* LaunchScreen.storyboard */; };
@@ -17,15 +15,11 @@
 		840EAFFC2194CBBD005E3102 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840EAFFB2194CBBD005E3102 /* Category.swift */; };
 		84EA3ADC219D92EF00DEF78B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA3ADA219D92EF00DEF78B /* TableViewCell.swift */; };
 		84EA3ADD219D92EF00DEF78B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EA3ADB219D92EF00DEF78B /* TableViewCell.xib */; };
-		84EA3AE0219D934500DEF78B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA3ADE219D934500DEF78B /* TableViewController.swift */; };
-		84EA3AE1219D934500DEF78B /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EA3ADF219D934500DEF78B /* TableViewController.xib */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840EAFE721949FA2005E3102 /* AddCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardsViewController.swift; sourceTree = "<group>"; };
-		840EAFE921949FB9005E3102 /* AddCardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardsViewController.xib; sourceTree = "<group>"; };
 		840EAFEC21949FFE005E3102 /* CardsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
 		840EAFEE2194A004005E3102 /* CardsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsListViewController.xib; sourceTree = "<group>"; };
 		840EAFF12194A111005E3102 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,8 +28,6 @@
 		840EAFFB2194CBBD005E3102 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		84EA3ADA219D92EF00DEF78B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		84EA3ADB219D92EF00DEF78B /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		84EA3ADE219D934500DEF78B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		84EA3ADF219D934500DEF78B /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30C7A52182FD11004FD699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30C7AC2182FD14004FD699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,28 +50,16 @@
 			isa = PBXGroup;
 			children = (
 				840EAFF12194A111005E3102 /* LaunchScreen.storyboard */,
-				840EAFE621949F71005E3102 /* AddCards */,
 				840EAFEB21949FD2005E3102 /* CardsList */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		840EAFE621949F71005E3102 /* AddCards */ = {
-			isa = PBXGroup;
-			children = (
-				840EAFE921949FB9005E3102 /* AddCardsViewController.xib */,
-				840EAFE721949FA2005E3102 /* AddCardsViewController.swift */,
-			);
-			path = AddCards;
-			sourceTree = "<group>";
-		};
 		840EAFEB21949FD2005E3102 /* CardsList */ = {
 			isa = PBXGroup;
 			children = (
-				840EAFEE2194A004005E3102 /* CardsListViewController.xib */,
 				840EAFEC21949FFE005E3102 /* CardsListViewController.swift */,
-				84EA3ADE219D934500DEF78B /* TableViewController.swift */,
-				84EA3ADF219D934500DEF78B /* TableViewController.xib */,
+				840EAFEE2194A004005E3102 /* CardsListViewController.xib */,
 				84EA3ADA219D92EF00DEF78B /* TableViewCell.swift */,
 				84EA3ADB219D92EF00DEF78B /* TableViewCell.xib */,
 			);
@@ -202,9 +182,7 @@
 				84EA3ADD219D92EF00DEF78B /* TableViewCell.xib in Resources */,
 				840EAFEF2194A004005E3102 /* CardsListViewController.xib in Resources */,
 				840EAFF22194A111005E3102 /* LaunchScreen.storyboard in Resources */,
-				84EA3AE1219D934500DEF78B /* TableViewController.xib in Resources */,
 				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
-				840EAFEA21949FB9005E3102 /* AddCardsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840EAFED21949FFE005E3102 /* CardsListViewController.swift in Sources */,
-				84EA3AE0219D934500DEF78B /* TableViewController.swift in Sources */,
 				840EAFFC2194CBBD005E3102 /* Category.swift in Sources */,
-				840EAFE821949FA2005E3102 /* AddCardsViewController.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,
 				84EA3ADC219D92EF00DEF78B /* TableViewCell.swift in Sources */,
 				840EAFFA2194C8BE005E3102 /* Card.swift in Sources */,

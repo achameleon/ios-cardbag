@@ -16,22 +16,22 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var Back: UIImageView!
     @IBOutlet weak var Button: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
     
-    func setDatas( Name:String, ClassCard:String, Discount:String, Front:String, Back:String){
+    
+    
+    func setDatas( Name:String, ClassCard:String, Discount:String, Front:String, Back:String){ 
         self.Name.text = Name
         self.ClassCard.text = ClassCard
         self.Discount.text = Discount
         
     }
+    
+   
+    
 }
 

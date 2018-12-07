@@ -43,4 +43,6 @@ class Card
         created_at = b["created_at"] as? String ?? ""
         updated_at = b["updated_at"] as? String ?? ""
     }
+    
 }
+

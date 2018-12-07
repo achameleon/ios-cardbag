@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsListViewController" customModule="cardbag" customModuleProvider="target">
             <connections>
                 <outlet property="Prob" destination="LFm-60-haU" id="zXo-EG-EE2"/>
+                <outlet property="TableView" destination="Gwc-dR-QfF" id="PZO-4H-gKS"/>
+                <outlet property="searchDisplayController" destination="shY-VS-eSP" id="QhK-PR-AfQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +43,11 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="220" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gwc-dR-QfF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -52,5 +59,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154.27286356821591"/>
         </view>
+        <searchDisplayController id="shY-VS-eSP">
+            <connections>
+                <outlet property="delegate" destination="-1" id="YMs-8R-ugz"/>
+                <outlet property="searchContentsController" destination="-1" id="wNG-H2-JNt"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="nNi-yQ-2ci"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="q94-O9-gRm"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>
