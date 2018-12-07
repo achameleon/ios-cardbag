@@ -45,7 +45,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         TableView.tableFooterView = UIView()
         TableView.delegate = self
         navigationItem.title = "CARDbag"
-        let usr = UIBarButtonItem(image: UIImage( named: "user-2"), style: .plain, target: self, action: #selector(updateSampleLabel))
+        let usr = UIBarButtonItem(image: UIImage( named: "userActive"), style: .plain, target: self, action: #selector(updateSampleLabel))
         
         if cards.count == 0  {
             //self.TableView.isHidden = true
@@ -54,7 +54,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         let nib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
         TableView.register(nib, forCellReuseIdentifier: "cell")
         TableView.dataSource = self
-        let add = UIBarButtonItem(image: UIImage( named: "add-2"), style: .plain, target: self, action: #selector(addCard))
+        let add = UIBarButtonItem(image: UIImage( named: "addActive"), style: .plain, target: self, action: #selector(addCard))
         navigationItem.rightBarButtonItems = [UIBarButtonItem]()
         navigationItem.rightBarButtonItems?.append(usr)
         navigationItem.rightBarButtonItems?.append(add)
