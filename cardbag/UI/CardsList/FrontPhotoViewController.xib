@@ -16,6 +16,7 @@
                 <outlet property="lbl" destination="smV-3j-RY7" id="X1Y-dI-Tmh"/>
                 <outlet property="lblCategories" destination="y8A-Oq-mVC" id="NL7-4a-GBT"/>
                 <outlet property="lblSale" destination="XQu-Ip-fpI" id="Qmu-rE-zlL"/>
+                <outlet property="myImageView" destination="oIZ-Yp-bBS" id="98g-Qz-hCY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -8,23 +8,10 @@
 
 import UIKit
 
-class FrontPhotoViewController: UIViewController, CardIOViewDelegate {
+class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func cardIOView(_ cardIOView: CardIOView!, didScanCard cardInfo: CardIOCreditCardInfo!) {
         
     }
-    
-//    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
-//        lbl.text = "user canceled"
-//        paymentViewController?.dismiss(animated: true, completion: nil)
-//    }
-//
-//    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
-//        if let info = cardInfo {
-//            let str = NSString(format: "Received card info.\n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-//            lbl.text = str as String
-//        }
-//        paymentViewController?.dismiss(animated: true, completion: nil)
-//    }
     
     
     @IBOutlet weak var btnNext: UIButton!
@@ -32,6 +19,7 @@ class FrontPhotoViewController: UIViewController, CardIOViewDelegate {
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var lblCategories: UILabel!
     @IBOutlet weak var lblSale: UILabel!
+    @IBOutlet weak var myImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +40,21 @@ class FrontPhotoViewController: UIViewController, CardIOViewDelegate {
     }
     
     @IBAction func makePhoto(_ sender: Any) {
-        let cardIOVC = CardIOView(frame: view.frame)
-        cardIOVC.delegate = self
-        var makePhoto = UIViewController()
-        makePhoto.view = cardIOVC
-        present(makePhoto, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
+            let imag = UIImagePickerController()
+            imag.delegate = self
+            imag.sourceType = UIImagePickerController.SourceType.camera;
+            imag.allowsEditing = true
+            self.present(imag, animated: true, completion: nil)
+        }
+    }
+        
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        let selectedImage : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        myImageView.image = selectedImage
+        self.dismiss(animated: true, completion: nil)
     }
     
     func nextPage() {
