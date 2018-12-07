@@ -10,8 +10,10 @@ import UIKit
 import VKSdkFramework
 import Firebase
 import GoogleSignIn
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
+class AppDelegate: UIResponder, UIApplicationDelegate{
+   
 
     var window: UIWindow?
 
@@ -26,21 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIResponder, UIApplicatio
         
         window?.makeKeyAndVisible()
         
-        return true
-    }
-    
-    
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        VKSdk.processOpen(url, fromApplication: sourceApplication)
-        return true
-    }
-    
-    func applicationDidFinishLaunching(_ application: UIApplication) {
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        
+        return true
     }
 
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
+        -> Bool {
+            VKSdk.processOpen(url, fromApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String)
+            return GIDSignIn.sharedInstance().handle(url,
+            sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+    }
 }
 

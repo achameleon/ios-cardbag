@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController {
     private var cards : Int = 5
@@ -20,7 +21,7 @@ class ProfileViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: "accesstoken")
         UserDefaults.standard.removeObject(forKey: "refreshtoken")
         UserDefaults.standard.removeObject(forKey: "fullname")
-        UserDefaults.standard.removeObject(forKey: "vkid")
+        UserDefaults.standard.removeObject(forKey: "userid")
         UserDefaults.standard.removeObject(forKey: "photo")
         let controller = LoginViewController()
         navigationController?.pushViewController(controller, animated: true)
@@ -30,11 +31,11 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         lb_cards.text = "Количество карт: \(cards) "
         lb_Name.text = UserDefaults.standard.string(forKey: "fullname") ?? "Иван Иванов"
-        lb_id.text = "vk.com/id\(UserDefaults.standard.string(forKey: "vkid") ?? "000")"
+        lb_id.text = "vk.com/id\(UserDefaults.standard.string(forKey: "userid") ?? "000")"
         b_exit.layer.cornerRadius=20
         b_exit.layer.masksToBounds = true
         
-        if UserDefaults.standard.string(forKey: "photo") != "" {
+        /*if UserDefaults.standard.string(forKey: "photo") != "" {
             let pictureURL = URL(string: UserDefaults.standard.string(forKey: "photo") ?? "https://pp.userapi.com/c841037/v841037296/59fea/aHoCw_zkqTs.jpg?ava=1")!
             
             let session = URLSession(configuration: .default)
@@ -42,7 +43,7 @@ class ProfileViewController: UIViewController {
             let downloadPicTask = session.dataTask(with: pictureURL) { (data, response, error) in
                 
                 if let e = error {
-                    print("Error downloading cat picture: \(e)")
+                    print("Error downloading picture: \(e)")
                 } else {
                     if let imageData = data {
                         
@@ -52,8 +53,10 @@ class ProfileViewController: UIViewController {
                 }
             }
             downloadPicTask.resume()
-        }
+        }*/
         
+        let pictureUrl = URL(string: UserDefaults.standard.string(forKey: "photo") ?? "https://pp.userapi.com/c841037/v841037296/59fea/aHoCw_zkqTs.jpg?ava=1")!
+        img_vk.kf.setImage(with: pictureUrl)
     }
 
 

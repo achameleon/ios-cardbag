@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="cardbag" customModuleProvider="target">
             <connections>
                 <outlet property="b_exit" destination="E0K-KC-Zr8" id="yFC-dC-JN7"/>
+                <outlet property="img_vk" destination="KtF-pB-rnx" id="aWr-yz-yET"/>
                 <outlet property="lb_Name" destination="bCX-aC-gIE" id="kRh-bX-6zm"/>
                 <outlet property="lb_cards" destination="EDh-mm-1tj" id="582-k1-fvv"/>
                 <outlet property="lb_id" destination="ElZ-Cf-fxq" id="4g3-pz-ZYj"/>
                 <outlet property="lb_sync" destination="xB9-FI-ZtB" id="kJH-wM-l7Y"/>
-                <outlet property="sdfds" destination="KtF-pB-rnx" id="jpz-HH-aeW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

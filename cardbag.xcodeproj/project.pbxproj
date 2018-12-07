@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31A32BC4E24ADA5E2AC40CE2 /* Pods_cardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1F6D9C2E58F8B16192EFD0 /* Pods_cardbag.framework */; };
+		7F641FE721BA750C00034C2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F641FE621BA750B00034C2E /* GoogleService-Info.plist */; };
 		843CA22F218C33EF00DB1294 /* CardAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA22E218C33EF00DB1294 /* CardAPI.swift */; };
 		843CA231218C344900DB1294 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CA230218C344900DB1294 /* Const.swift */; };
 		84860FA02195617D00EF0CBC /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84860F9D2195616700EF0CBC /* VKSdkFramework.framework */; };
@@ -15,7 +16,6 @@
 		84860FAC219561F100EF0CBC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84860FA7219561F000EF0CBC /* ProfileViewController.xib */; };
 		84860FAD219561F100EF0CBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84860FA9219561F000EF0CBC /* LoginViewController.swift */; };
 		84860FAE219561F100EF0CBC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84860FAA219561F000EF0CBC /* LoginViewController.xib */; };
-		848B7ADC21B981EA0037991B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848B7ADB21B981E90037991B /* GoogleService-Info.plist */; };
 		CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30C7A52182FD11004FD699 /* AppDelegate.swift */; };
 		CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AC2182FD14004FD699 /* Assets.xcassets */; };
 		CE30C7B02182FD14004FD699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */; };
@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0B1F6D9C2E58F8B16192EFD0 /* Pods_cardbag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cardbag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F641FE621BA750B00034C2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		843CA22E218C33EF00DB1294 /* CardAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAPI.swift; sourceTree = "<group>"; };
 		843CA230218C344900DB1294 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		84860F912195616700EF0CBC /* VK-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "VK-ios-sdk.xcodeproj"; path = "vk-ios-sdk-master/VK-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		84860FA7219561F000EF0CBC /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		84860FA9219561F000EF0CBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84860FAA219561F000EF0CBC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		848B7ADB21B981E90037991B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84B5D0E168B4496D2BBD65A7 /* Pods-cardbag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.release.xcconfig"; sourceTree = "<group>"; };
 		C380207FEE99249CD44E7BE9 /* Pods-cardbag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.debug.xcconfig"; sourceTree = "<group>"; };
 		CE30C7A22182FD11004FD699 /* cardbag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardbag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +173,7 @@
 				CEE513A9218311720018FCC7 /* OwnTableViewController.xib */,
 				CE30C7AC2182FD14004FD699 /* Assets.xcassets */,
 				CE30C7AE2182FD14004FD699 /* LaunchScreen.storyboard */,
-				848B7ADB21B981E90037991B /* GoogleService-Info.plist */,
+				7F641FE621BA750B00034C2E /* GoogleService-Info.plist */,
 				CE30C7B12182FD14004FD699 /* Info.plist */,
 				843CA22E218C33EF00DB1294 /* CardAPI.swift */,
 				843CA230218C344900DB1294 /* Const.swift */,
@@ -286,7 +286,7 @@
 				CEE513AD218311720018FCC7 /* OwnTableViewController.xib in Resources */,
 				84860FAC219561F100EF0CBC /* ProfileViewController.xib in Resources */,
 				CE30C7AD2182FD14004FD699 /* Assets.xcassets in Resources */,
-				848B7ADC21B981EA0037991B /* GoogleService-Info.plist in Resources */,
+				7F641FE721BA750C00034C2E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,22 +361,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-cardbag/Pods-cardbag-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,9 @@ target 'cardbag' do
 
   # Pods for cardbag
 
-  pod 'Alamofire', '~> 4.7'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
-
+  pod 'Kingfisher'
 end
 

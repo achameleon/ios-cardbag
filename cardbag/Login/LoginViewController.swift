@@ -11,7 +11,8 @@ import VKSdkFramework
 import Firebase
 import GoogleSignIn
 import Alamofire
-class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GIDSignInUIDelegate {
+
+class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     let app_id = "6378335"
     let scope = ["email", "offlain", "photos"]
     let secret_key = "LfcFkItvmzgmTXCD5leu"
@@ -41,6 +42,9 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
     private func loginVK() {
         sdkInstance?.register(self)
         sdkInstance?.uiDelegate=self
+        
+        
+        
         VKSdk.wakeUpSession(scope, complete: {
             (state: VKAuthorizationState, error: Error?) -> Void
             in if state == .authorized /*|| (self.access_token != "" && self.refresh_token != "")*/{
@@ -60,9 +64,9 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
             vk_token = (result?.token.accessToken)!
             print("user token: \(vk_token)")
             uuid=(result?.token.userId)!
-            UserDefaults.standard.set(uuid, forKey: "vkid")
-            //getUserInfo(id: uuid, token: vk_token)
-            userAccessToken(token: vk_token)
+            UserDefaults.standard.set(uuid, forKey: "userid")
+            getUserInfo(id: uuid, token: vk_token)
+            userAccessToken(token: vk_token, network_id: 1)
         }
         else if ((result?.error) != nil) {
             let error_text = result?.error.debugDescription
@@ -75,16 +79,16 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
         let parameters = [
             "access_token" : token,
             "user_id" : id,
-            "fields" : "photo_50",
+            "fields" : "photo_200",
             "v" : "5.89"]
         Alamofire.request(url, method: .post, parameters: parameters, headers: [:]).responseJSON(completionHandler: {
             response in switch response.result {
             case .success(let JSON):
                 print("Success with JSON: \(JSON)")
                 
-                let response = JSON as! NSDictionary
-                let data = response.object(forKey: "response") as! [String:AnyObject]
-                let photo = data["photo_50"]!
+                let response = JSON as! [String:AnyObject]
+                let data = (response["response"] as! [AnyObject]).first as! [String:AnyObject]
+                let photo = data["photo_200"]!
                 print(photo)
                 UserDefaults.standard.set(photo, forKey: "photo")
             case .failure(let error):
@@ -111,12 +115,12 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
             })
     }
     
-    func userAccessToken(token: String) {
+    func userAccessToken(token: String, network_id : Int) {
         let requestString = api_url + "/user/token"
         let parameters = [
             "uid": uuid,
             "token": token,
-        "network_id": 1] as [String: Any]
+        "network_id": network_id] as [String: Any]
         Alamofire.request(requestString, method: .post, parameters: parameters, headers: [:]).responseJSON(completionHandler: {
             response
             in switch response.result {
@@ -133,7 +137,7 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
                 self.uuid = response["uid"] as! String
                 UserDefaults.standard.set((response["full_name"] as! String), forKey: "fullname")
                 
-                self.userRefreshToken(token: self.refresh_token)
+                self.userRefreshToken(token: self.refresh_token, network_id: network_id)
             case .failure(let error):
                 print("Request failed with error: \(error)")
                 
@@ -142,10 +146,10 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
             
         })
     }
-    func userRefreshToken(token: String) {
+    func userRefreshToken(token: String, network_id : Int) {
         let requestString = api_url + "/token/refresh"
         let parameters = [
-            "network_id": 1,
+            "network_id": network_id,
             "token": token,
             "uid": uuid
             ] as [String: Any]
@@ -172,33 +176,7 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
         })
     }
     
-    private func loginGoogle() {
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-            if let error = error {
-                // ...
-                print("error signing in with google")
-            }
-            else {
-               print(authResult)
-            }
-           
-        }
-    }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
-        if let error = error {
-            // ...
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        // ...
-    }
     
     func showAccount() {
         let controller = ProfileViewController()
@@ -231,6 +209,57 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, GID
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         
+    }
+
+}
+
+extension LoginViewController : GIDSignInUIDelegate, GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        guard let controller = viewController
+            else {
+                return
+        }
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        guard let controller = viewController
+            else {
+                return
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func loginGoogle() {
+        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
+    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        if let error = error {
+            print("error signing in with google \(error)")
+            return
+        }
+        
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        access_token = user.authentication.accessToken!
+        uuid = user.userID
+        UserDefaults.standard.set(uuid, forKey: "userid")
+        userAccessToken(token: access_token, network_id: 2)
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
     }
 
 }
