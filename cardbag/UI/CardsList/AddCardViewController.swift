@@ -10,6 +10,8 @@ import UIKit
 
 class AddCardViewController: UIViewController, UITextFieldDelegate {
     
+    var category: TestData?
+    
     @IBOutlet weak var btnPhoto: UIButton!
     @IBOutlet weak var cardName: UITextField!
     @IBOutlet weak var categories: UITextField!
@@ -40,6 +42,9 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
     
     func photoFrontPage() {
         let nextPage = FrontPhotoViewController()
+        nextPage.cardName = cardName.text ?? ""
+        nextPage.sale = sale.text ?? ""
+        nextPage.category = category
         navigationController?.pushViewController(nextPage, animated: true)
     }
 
@@ -71,6 +76,7 @@ extension AddCardViewController: CategoriesChangeDelegate {
     
     func provideCategory(item: TestData) {
         categories.text = item.title
+        category = item
     }
     
 }

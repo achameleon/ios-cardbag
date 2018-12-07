@@ -9,10 +9,10 @@
 import UIKit
 
 class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func cardIOView(_ cardIOView: CardIOView!, didScanCard cardInfo: CardIOCreditCardInfo!) {
-        
-    }
     
+    var cardName: String = ""
+    var category: TestData?
+    var sale: String = ""
     
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnPhoto: UIButton!
