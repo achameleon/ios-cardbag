@@ -14,9 +14,17 @@ struct TestData {
     var title: String = ""
     let p = CategoriesViewController()
     
-    init (map: AnyObject) {
+    init?(map: AnyObject?) {
+        guard  let map = map as? [String: AnyObject] else {
+            return
+        }
         id = map["id"] as! Int
         title = map["title"] as! String
+    }
+    
+    init(id: Int, title: String) {
+        self.id = id
+        self.title = title
     }
     
 }

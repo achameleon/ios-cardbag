@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import Realm
+import RealmSwift
 
 protocol CategoriesChangeDelegate: class {
     
@@ -63,15 +65,31 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         navigationItem.title = "Выбрать категорию"
         setupSearchBar()
         
+        let realm = try! Realm()
+        
+        let result = realm.objects(RCategoryItem.self)
+        var ts = [TestData]()
+        for t in result {
+            ts.append(TestData(id: t.id, title: t.title))
+        }
+        if ts.count > 0 {
+            categArray = ts
+            filteredCategories = ts
+            tblCategories.reloadData()
+        }
+        
         let url = URL(string: "http://cardbag.ru/api/categories")!
         Alamofire.request(url, method: .get).responseJSON { (response) in
             if let d = response.result.value as? AnyObject {
+                realm.beginWrite()
                 for i in 0..<d.count {
-                    let object = TestData(map: d[i])
+                    guard let object = TestData(map: d[i]) else {continue}
                     self.categArray.append(object)
                     self.filteredCategories.append(object)
                     self.tblCategories.reloadData()
+                    realm.add(RCategoryItem(id: object.id, title: object.title), update: true)
                 }
+                try! realm.commitWrite()
             }
         }
         // Do any additional setup after loading the view.

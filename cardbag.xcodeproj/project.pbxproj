@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F25A91C21BA76980000F2E0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A91B21BA76980000F2E0 /* Category.swift */; };
 		0F65DA8721B14C7A00C3B2FB /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DA8621B14C7A00C3B2FB /* TestData.swift */; };
 		0FDB7F46218B56330099B17A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDB7F45218B56330099B17A /* Alamofire.framework */; };
 		1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB770218194D700E647FD /* RearPhotoViewController.xib */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F25A91B21BA76980000F2E0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F65DA8621B14C7A00C3B2FB /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		0FDB7F45218B56330099B17A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDB7F53219ECAFE0099B17A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -66,9 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F25A91821BA76720000F2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F25A91B21BA76980000F2E0 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0F65DA8521B14C6300C3B2FB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				0F25A91821BA76720000F2E0 /* Model */,
 				0F65DA8621B14C7A00C3B2FB /* TestData.swift */,
 			);
 			path = Entity;
@@ -294,6 +305,7 @@
 				84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */,
 				0F65DA8721B14C7A00C3B2FB /* TestData.swift in Sources */,
 				84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */,
+				0F25A91C21BA76980000F2E0 /* Category.swift in Sources */,
 				8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */,
 				84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */,
 				8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */,
