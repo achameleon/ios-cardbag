@@ -26,13 +26,19 @@ class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate
             let imag = UIImagePickerController()
             imag.delegate = self
             imag.sourceType = UIImagePickerController.SourceType.camera;
-            imag.allowsEditing = false
+            imag.allowsEditing = true
             self.present(imag, animated: true, completion: nil)
         }
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!) {
-        let selectedImage : UIImage = image
+
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
+        let selectedImage : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
         myImageView.image = selectedImage
         self.dismiss(animated: true, completion: nil)
     }
