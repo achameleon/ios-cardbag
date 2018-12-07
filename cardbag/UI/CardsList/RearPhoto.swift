@@ -31,9 +31,9 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     var sale: String = ""
     
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-    {
-        let selectedImage : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let selectedImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         myImageView.image = selectedImage
         self.dismiss(animated: true, completion: nil)
     }
