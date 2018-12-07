@@ -54,6 +54,9 @@
                         <constraint firstAttribute="height" constant="50" id="tsJ-58-scZ"/>
                     </constraints>
                     <state key="normal" backgroundImage="Google"/>
+                    <connections>
+                        <action selector="b_google_act:" destination="-1" eventType="touchUpInside" id="ekZ-nc-oFG"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maM-HU-GZ1">
                     <rect key="frame" x="100.5" y="285" width="50" height="50"/>

@@ -8,17 +8,17 @@
 
 import UIKit
 import VKSdkFramework
+import Firebase
+import GoogleSignIn
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        //let navigation = UINavigationController(rootViewController: OwnTableViewController())
+        window = UIWindow(frame: UIScreen.main.bounds)  
         
         let navigationMy = UINavigationController(rootViewController: LoginViewController())
         
@@ -29,13 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    /*func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        VKSdk.processOpen(url, fromApplication: options.sou)
-    }*/
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         VKSdk.processOpen(url, fromApplication: sourceApplication)
         return true
+    }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
     }
 
 }
