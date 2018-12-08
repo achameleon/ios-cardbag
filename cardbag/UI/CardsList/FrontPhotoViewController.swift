@@ -31,7 +31,10 @@ class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegat
         
         lbl.text = "Лицевая сторона"
         navigationController?.navigationBar.isTranslucent = false
-        navigationItem.title = "Спортмастер"
+        navigationItem.title = cardName
+        lblCategories.text = category?.title
+        lblSale.text = sale
+        
         // Do any additional setup after loading the view.
     }
     
@@ -59,6 +62,9 @@ class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegat
     
     func nextPage() {
         let next = RearPhotoViewController()
+        next.cardName = cardName
+        next.category = category
+        next.sale = sale
         navigationController?.pushViewController(next, animated: true)
     }
 

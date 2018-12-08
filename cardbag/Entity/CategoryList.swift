@@ -1,5 +1,5 @@
 //
-//  TestData.swift
+//  CategoryList.swift
 //  CardBag
 //
 //  Created by User2 on 30.11.2018.

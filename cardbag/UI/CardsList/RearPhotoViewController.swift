@@ -26,6 +26,10 @@ class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+    var cardName: String = ""
+    var category: TestData?
+    var sale: String = ""
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
@@ -42,7 +46,9 @@ class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate
         lblSale.layer.cornerRadius = 12
         lbl.text = "Тыльная сторона"
         navigationController?.navigationBar.isTranslucent = false
-        navigationItem.title = "Спортмастер"        // Do any additional setup after loading the view.
+        navigationItem.title = cardName
+        lblCategories.text = category?.title
+        lblSale.text = sale
     }
     
     override func didReceiveMemoryWarning() {
