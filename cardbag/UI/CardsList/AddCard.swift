@@ -1,5 +1,5 @@
 //
-//  AddCardViewController.swift
+//  AddCard.swift
 //  CardBag
 //
 //  Created by Admin on 23.10.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController, UITextFieldDelegate {
+class AddCard: UIViewController, UITextFieldDelegate {
     
     var category: CategoryList?
     
@@ -41,7 +41,7 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
     }
     
     func photoFrontPage() {
-        let nextPage = FrontPhotoViewController()
+        let nextPage = FrontPhoto()
         nextPage.cardName = cardName.text ?? ""
         nextPage.sale = sale.text ?? ""
         nextPage.category = category
@@ -49,16 +49,17 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
     }
 
     func categoriesPage() {
-        let categoriesPage = CategoriesViewController()
+        let categoriesPage = Categories()
         categoriesPage.delegate = self
         navigationController?.pushViewController(categoriesPage, animated: true)
     }
     
     @objc func myTargetFunction(textField: UITextField) {
-        let categoriesPage = CategoriesViewController()
+        let categoriesPage = Categories()
         categoriesPage.delegate = self
         navigationController?.pushViewController(categoriesPage, animated: true)        
     }
+    
 
     /*
     // MARK: - Navigation
@@ -72,7 +73,7 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
 
 }
 
-extension AddCardViewController: CategoriesChangeDelegate {
+extension AddCard: CategoriesChangeDelegate {
     
     func provideCategory(item: CategoryList) {
         categories.text = item.title

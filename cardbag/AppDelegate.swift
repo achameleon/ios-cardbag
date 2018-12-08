@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = EmptyPageViewController()
+        let viewController = EmptyPage()
         
         let navigation = UINavigationController(rootViewController: viewController)
         

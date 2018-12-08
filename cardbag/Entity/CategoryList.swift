@@ -12,7 +12,7 @@ struct CategoryList {
     
     var id = 0
     var title: String = ""
-    let p = CategoriesViewController()
+    let p = Categories()
     
     init?(map: AnyObject?) {
         guard  let map = map as? [String: AnyObject] else {

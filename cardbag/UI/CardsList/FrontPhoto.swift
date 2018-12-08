@@ -1,5 +1,5 @@
 //
-//  FrontPhotoViewController.swift
+//  FrontPhoto.swift
 //  CardBag
 //
 //  Created by Admin on 24.10.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FrontPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var cardName: String = ""
     var category: CategoryList?
@@ -61,7 +61,7 @@ class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func nextPage() {
-        let next = RearPhotoViewController()
+        let next = RearPhoto()
         next.cardName = cardName
         next.category = category
         next.sale = sale

@@ -1,5 +1,5 @@
 //
-//  RearPhotoViewController.swift
+//  RearPhoto.swift
 //  CardBag
 //
 //  Created by Admin on 24.10.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var lbl: UILabel!
     @IBOutlet var btnSave: UIButton!

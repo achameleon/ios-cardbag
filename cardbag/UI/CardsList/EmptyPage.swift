@@ -1,5 +1,5 @@
 //
-//  EmptyPageViewController.swift
+//  EmptyPage.swift
 //  CardBag
 //
 //  Created by Admin on 17.10.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmptyPageViewController: UIViewController {
+class EmptyPage: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblText: UILabel!
     
@@ -27,7 +27,7 @@ class EmptyPageViewController: UIViewController {
     }
 
     @objc private func addCard() {
-        let addPage = AddCardViewController()
+        let addPage = AddCard()
         let navigation = UINavigationController(rootViewController: addPage)
         let closeButton = UIBarButtonItem(image: UIImage(named: "closeActive"), style: .plain, target: self, action: #selector(close))
         

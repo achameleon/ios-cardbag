@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.swift
+//  Categories.swift
 //  CardBag
 //
 //  Created by Admin on 25.10.2018.
@@ -17,7 +17,7 @@ protocol CategoriesChangeDelegate: class {
     
 }
 
-class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class Categories: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tblCategories: UITableView!
     
@@ -110,7 +110,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
 }
 
 
-extension CategoriesViewController: UISearchBarDelegate {
+extension Categories: UISearchBarDelegate {
  
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchField = searchText

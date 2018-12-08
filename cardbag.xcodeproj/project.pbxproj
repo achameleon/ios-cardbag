@@ -10,22 +10,22 @@
 		0F25A91C21BA76980000F2E0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A91B21BA76980000F2E0 /* Category.swift */; };
 		0F65DA8721B14C7A00C3B2FB /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DA8621B14C7A00C3B2FB /* CategoryList.swift */; };
 		0FDB7F46218B56330099B17A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDB7F45218B56330099B17A /* Alamofire.framework */; };
-		1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB770218194D700E647FD /* RearPhotoViewController.xib */; };
+		1F060BAD21832A6800FE0212 /* RearPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB770218194D700E647FD /* RearPhoto.xib */; };
 		58E38D9592B24C5888CAC83B /* Pods_CardBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD0079815BE770641D3910B /* Pods_CardBag.framework */; };
-		8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */; };
-		8421CE1C2177B54E00C469C5 /* EmptyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */; };
+		8421CE1B2177B54E00C469C5 /* EmptyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421CE192177B54E00C469C5 /* EmptyPage.swift */; };
+		8421CE1C2177B54E00C469C5 /* EmptyPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8421CE1A2177B54E00C469C5 /* EmptyPage.xib */; };
 		8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449B06421704C5D00191D89 /* AppDelegate.swift */; };
 		8449B06C21704C6900191D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8449B06B21704C6900191D89 /* Assets.xcassets */; };
 		8449B06F21704C6900191D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8449B06D21704C6900191D89 /* LaunchScreen.storyboard */; };
 		84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB760217F7F8000E647FD /* MyCustomCell.swift */; };
 		84FCB763217F7FB600E647FD /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB762217F7FB600E647FD /* MyCustomCell.xib */; };
-		84FCB766217F815C00E647FD /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB764217F815C00E647FD /* AddCardViewController.swift */; };
-		84FCB767217F815C00E647FD /* AddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB765217F815C00E647FD /* AddCardViewController.xib */; };
-		84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */; };
-		84FCB76B21804B3300E647FD /* FrontPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */; };
-		84FCB771218194D700E647FD /* RearPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76F218194D700E647FD /* RearPhotoViewController.swift */; };
-		84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB7722182034800E647FD /* CategoriesViewController.swift */; };
-		84FCB7752182034800E647FD /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB7732182034800E647FD /* CategoriesViewController.xib */; };
+		84FCB766217F815C00E647FD /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB764217F815C00E647FD /* AddCard.swift */; };
+		84FCB767217F815C00E647FD /* AddCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB765217F815C00E647FD /* AddCard.xib */; };
+		84FCB76A21804B3300E647FD /* FrontPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76821804B3300E647FD /* FrontPhoto.swift */; };
+		84FCB76B21804B3300E647FD /* FrontPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB76921804B3300E647FD /* FrontPhoto.xib */; };
+		84FCB771218194D700E647FD /* RearPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB76F218194D700E647FD /* RearPhoto.swift */; };
+		84FCB7742182034800E647FD /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCB7722182034800E647FD /* Categories.swift */; };
+		84FCB7752182034800E647FD /* Categories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FCB7732182034800E647FD /* Categories.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		0FDB7F45218B56330099B17A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDB7F53219ECAFE0099B17A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		1FD4FB2D51FAB5DC668AE9A7 /* Pods-CardBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardBag/Pods-CardBag.debug.xcconfig"; sourceTree = "<group>"; };
-		8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPageViewController.swift; sourceTree = "<group>"; };
-		8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPageViewController.xib; sourceTree = "<group>"; };
+		8421CE192177B54E00C469C5 /* EmptyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPage.swift; sourceTree = "<group>"; };
+		8421CE1A2177B54E00C469C5 /* EmptyPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPage.xib; sourceTree = "<group>"; };
 		8449B06121704C5D00191D89 /* CardBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8449B06421704C5D00191D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8449B06B21704C6900191D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,14 +43,14 @@
 		8449B07021704C6900191D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84FCB760217F7F8000E647FD /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		84FCB762217F7FB600E647FD /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
-		84FCB764217F815C00E647FD /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
-		84FCB765217F815C00E647FD /* AddCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardViewController.xib; sourceTree = "<group>"; };
-		84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPhotoViewController.swift; sourceTree = "<group>"; };
-		84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrontPhotoViewController.xib; sourceTree = "<group>"; };
-		84FCB76F218194D700E647FD /* RearPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearPhotoViewController.swift; sourceTree = "<group>"; };
-		84FCB770218194D700E647FD /* RearPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RearPhotoViewController.xib; sourceTree = "<group>"; };
-		84FCB7722182034800E647FD /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		84FCB7732182034800E647FD /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		84FCB764217F815C00E647FD /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		84FCB765217F815C00E647FD /* AddCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCard.xib; sourceTree = "<group>"; };
+		84FCB76821804B3300E647FD /* FrontPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPhoto.swift; sourceTree = "<group>"; };
+		84FCB76921804B3300E647FD /* FrontPhoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrontPhoto.xib; sourceTree = "<group>"; };
+		84FCB76F218194D700E647FD /* RearPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearPhoto.swift; sourceTree = "<group>"; };
+		84FCB770218194D700E647FD /* RearPhoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RearPhoto.xib; sourceTree = "<group>"; };
+		84FCB7722182034800E647FD /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		84FCB7732182034800E647FD /* Categories.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Categories.xib; sourceTree = "<group>"; };
 		92AD14B2DDFAB228D0338136 /* Pods-CardBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardBag/Pods-CardBag.release.xcconfig"; sourceTree = "<group>"; };
 		CAD0079815BE770641D3910B /* Pods_CardBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,18 +145,18 @@
 		8449B07C21704E8F00191D89 /* CardsList */ = {
 			isa = PBXGroup;
 			children = (
-				8421CE192177B54E00C469C5 /* EmptyPageViewController.swift */,
-				8421CE1A2177B54E00C469C5 /* EmptyPageViewController.xib */,
-				84FCB764217F815C00E647FD /* AddCardViewController.swift */,
-				84FCB765217F815C00E647FD /* AddCardViewController.xib */,
+				8421CE192177B54E00C469C5 /* EmptyPage.swift */,
+				8421CE1A2177B54E00C469C5 /* EmptyPage.xib */,
+				84FCB764217F815C00E647FD /* AddCard.swift */,
+				84FCB765217F815C00E647FD /* AddCard.xib */,
 				84FCB760217F7F8000E647FD /* MyCustomCell.swift */,
 				84FCB762217F7FB600E647FD /* MyCustomCell.xib */,
-				84FCB76821804B3300E647FD /* FrontPhotoViewController.swift */,
-				84FCB76921804B3300E647FD /* FrontPhotoViewController.xib */,
-				84FCB76F218194D700E647FD /* RearPhotoViewController.swift */,
-				84FCB770218194D700E647FD /* RearPhotoViewController.xib */,
-				84FCB7722182034800E647FD /* CategoriesViewController.swift */,
-				84FCB7732182034800E647FD /* CategoriesViewController.xib */,
+				84FCB76821804B3300E647FD /* FrontPhoto.swift */,
+				84FCB76921804B3300E647FD /* FrontPhoto.xib */,
+				84FCB76F218194D700E647FD /* RearPhoto.swift */,
+				84FCB770218194D700E647FD /* RearPhoto.xib */,
+				84FCB7722182034800E647FD /* Categories.swift */,
+				84FCB7732182034800E647FD /* Categories.xib */,
 			);
 			path = CardsList;
 			sourceTree = "<group>";
@@ -231,14 +231,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F060BAD21832A6800FE0212 /* RearPhotoViewController.xib in Resources */,
-				8421CE1C2177B54E00C469C5 /* EmptyPageViewController.xib in Resources */,
+				1F060BAD21832A6800FE0212 /* RearPhoto.xib in Resources */,
+				8421CE1C2177B54E00C469C5 /* EmptyPage.xib in Resources */,
 				8449B06F21704C6900191D89 /* LaunchScreen.storyboard in Resources */,
-				84FCB7752182034800E647FD /* CategoriesViewController.xib in Resources */,
-				84FCB767217F815C00E647FD /* AddCardViewController.xib in Resources */,
+				84FCB7752182034800E647FD /* Categories.xib in Resources */,
+				84FCB767217F815C00E647FD /* AddCard.xib in Resources */,
 				84FCB763217F7FB600E647FD /* MyCustomCell.xib in Resources */,
 				8449B06C21704C6900191D89 /* Assets.xcassets in Resources */,
-				84FCB76B21804B3300E647FD /* FrontPhotoViewController.xib in Resources */,
+				84FCB76B21804B3300E647FD /* FrontPhoto.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,15 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FCB766217F815C00E647FD /* AddCardViewController.swift in Sources */,
-				84FCB771218194D700E647FD /* RearPhotoViewController.swift in Sources */,
-				84FCB76A21804B3300E647FD /* FrontPhotoViewController.swift in Sources */,
+				84FCB766217F815C00E647FD /* AddCard.swift in Sources */,
+				84FCB771218194D700E647FD /* RearPhoto.swift in Sources */,
+				84FCB76A21804B3300E647FD /* FrontPhoto.swift in Sources */,
 				0F65DA8721B14C7A00C3B2FB /* CategoryList.swift in Sources */,
 				84FCB761217F7F8000E647FD /* MyCustomCell.swift in Sources */,
 				0F25A91C21BA76980000F2E0 /* Category.swift in Sources */,
 				8449B06521704C5D00191D89 /* AppDelegate.swift in Sources */,
-				84FCB7742182034800E647FD /* CategoriesViewController.swift in Sources */,
-				8421CE1B2177B54E00C469C5 /* EmptyPageViewController.swift in Sources */,
+				84FCB7742182034800E647FD /* Categories.swift in Sources */,
+				8421CE1B2177B54E00C469C5 /* EmptyPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
