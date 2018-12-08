@@ -11,7 +11,7 @@ import UIKit
 class FrontPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var cardName: String = ""
-    var category: TestData?
+    var category: CategoryList?
     var sale: String = ""
     
     @IBOutlet weak var btnNext: UIButton!

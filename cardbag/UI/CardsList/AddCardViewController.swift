@@ -10,7 +10,7 @@ import UIKit
 
 class AddCardViewController: UIViewController, UITextFieldDelegate {
     
-    var category: TestData?
+    var category: CategoryList?
     
     @IBOutlet weak var btnPhoto: UIButton!
     @IBOutlet weak var cardName: UITextField!
@@ -74,7 +74,7 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
 
 extension AddCardViewController: CategoriesChangeDelegate {
     
-    func provideCategory(item: TestData) {
+    func provideCategory(item: CategoryList) {
         categories.text = item.title
         category = item
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TestData {
+struct CategoryList {
     
     var id = 0
     var title: String = ""

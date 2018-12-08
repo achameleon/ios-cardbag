@@ -27,7 +27,7 @@ class RearPhotoViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     var cardName: String = ""
-    var category: TestData?
+    var category: CategoryList?
     var sale: String = ""
     
     func imagePickerController(_ picker: UIImagePickerController,

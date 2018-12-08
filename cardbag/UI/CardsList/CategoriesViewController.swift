@@ -13,7 +13,7 @@ import RealmSwift
 
 protocol CategoriesChangeDelegate: class {
     
-    func provideCategory(item: TestData)
+    func provideCategory(item: CategoryList)
     
 }
 
@@ -23,8 +23,8 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     
     var delegate: CategoriesChangeDelegate?
     
-    var categArray = [TestData]()
-    var filteredCategories = [TestData]()
+    var categArray = [CategoryList]()
+    var filteredCategories = [CategoryList]()
     let searchController = UISearchController(searchResultsController: nil)
     var searchField: String = ""
     
@@ -34,7 +34,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as! MyCustomCell
-        let categ: TestData!
+        let categ: CategoryList!
         categ = filteredCategories[indexPath.row]
         cell.textF.text = categ.title
         return cell
@@ -68,9 +68,9 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         let realm = try! Realm()
         
         let result = realm.objects(RCategoryItem.self)
-        var ts = [TestData]()
+        var ts = [CategoryList]()
         for t in result {
-            ts.append(TestData(id: t.id, title: t.title))
+            ts.append(CategoryList(id: t.id, title: t.title))
         }
         if ts.count > 0 {
             categArray = ts
@@ -83,7 +83,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
             if let d = response.result.value as? AnyObject {
                 realm.beginWrite()
                 for i in 0..<d.count {
-                    guard let object = TestData(map: d[i]) else {continue}
+                    guard let object = CategoryList(map: d[i]) else {continue}
                     self.categArray.append(object)
                     self.filteredCategories.append(object)
                     self.tblCategories.reloadData()
@@ -117,7 +117,7 @@ extension CategoriesViewController: UISearchBarDelegate {
         if searchBarIsEmpty() {
             filteredCategories = categArray
         } else {
-            filteredCategories = categArray.filter({(categ: TestData) -> Bool in
+            filteredCategories = categArray.filter({(categ: CategoryList) -> Bool in
                 return categ.title.lowercased().contains(searchText.lowercased())
             })
         }
