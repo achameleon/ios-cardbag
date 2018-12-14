@@ -35,7 +35,7 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func save(_ sender: Any) {
-        var cardItem = Card()
+        let cardItem = Card()
         cardItem.title = cardName
         cardItem.category = category
         cardItem.discount = Int(sale) ?? 0
