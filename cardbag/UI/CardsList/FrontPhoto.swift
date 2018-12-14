@@ -10,9 +10,11 @@ import UIKit
 
 class FrontPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var card: CardRepository?
     var cardName: String = ""
     var category: CategoryList?
     var sale: String = ""
+    var frontImage: UIImage?
     
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var btnPhoto: UIButton!
@@ -43,10 +45,10 @@ class FrontPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func makePhoto(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imag = UIImagePickerController()
             imag.delegate = self
-            imag.sourceType = UIImagePickerController.SourceType.camera;
+            imag.sourceType = UIImagePickerController.SourceType.photoLibrary;
             imag.allowsEditing = true
             self.present(imag, animated: true, completion: nil)
         }
@@ -58,14 +60,17 @@ class FrontPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     {
         let selectedImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         myImageView.image = selectedImage
+        frontImage = selectedImage
         self.dismiss(animated: true, completion: nil)
     }
     
     func nextPage() {
         let next = RearPhoto()
+        next.card = card
         next.cardName = cardName
         next.category = category
         next.sale = sale
+        next.frontPhoto = frontImage
         navigationController?.pushViewController(next, animated: true)
     }
 

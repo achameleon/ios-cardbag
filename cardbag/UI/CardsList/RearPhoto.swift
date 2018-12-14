@@ -10,6 +10,8 @@ import UIKit
 
 class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var card: CardRepository?
+    
     @IBOutlet var lbl: UILabel!
     @IBOutlet var btnSave: UIButton!
     @IBOutlet weak var lblCategories: UILabel!
@@ -17,24 +19,31 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var myImageView: UIImageView!
     
     @IBAction func makePhoto(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imag = UIImagePickerController()
             imag.delegate = self
-            imag.sourceType = UIImagePickerController.SourceType.camera;
+            imag.sourceType = UIImagePickerController.SourceType.photoLibrary;
             imag.allowsEditing = true
             self.present(imag, animated: true, completion: nil)
         }
     }
     
+    @IBAction func save(_ sender: Any) {
+        card?.addCard(card: <#T##Card#>)
+    }
+    
     var cardName: String = ""
     var category: CategoryList?
     var sale: String = ""
+    var frontPhoto: UIImage?
+    var rearImage: UIImage?
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let selectedImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         myImageView.image = selectedImage
+        rearImage = selectedImage
         self.dismiss(animated: true, completion: nil)
     }
     

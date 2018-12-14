@@ -9,6 +9,7 @@
 import UIKit
 
 class EmptyPage: UIViewController {
+    var card: CardRepository = CardRepository()
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblText: UILabel!
     
@@ -28,6 +29,7 @@ class EmptyPage: UIViewController {
 
     @objc private func addCard() {
         let addPage = AddCard()
+        addPage.card = card
         let navigation = UINavigationController(rootViewController: addPage)
         let closeButton = UIBarButtonItem(image: UIImage(named: "closeActive"), style: .plain, target: self, action: #selector(close))
         
