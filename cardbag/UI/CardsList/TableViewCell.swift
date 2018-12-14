@@ -28,7 +28,8 @@ class TableViewCell: UITableViewCell {
         self.Name.text = Name
         self.ClassCard.text = ClassCard
         self.Discount.text = Discount
-        
+        self.Front.image = Front
+        self.Back.image = Back
     }
     
    
