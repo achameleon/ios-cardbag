@@ -11,6 +11,12 @@ import UIKit
 class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var card: CardRepository?
+    var cardName: String = ""
+    var category: CategoryList?
+    var sale: String = ""
+    var frontPhoto: UIImage?
+    var rearImage: UIImage?
+    
     
     @IBOutlet var lbl: UILabel!
     @IBOutlet var btnSave: UIButton!
@@ -29,15 +35,14 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func save(_ sender: Any) {
-        card?.addCard(card: <#T##Card#>)
+        var cardItem = Card()
+        cardItem.title = cardName
+        cardItem.category = category
+        cardItem.discount = Int(sale) ?? 0
+        cardItem.front_photo = frontPhoto
+        cardItem.back_photo = rearImage
+        card?.addCard(card: cardItem)
     }
-    
-    var cardName: String = ""
-    var category: CategoryList?
-    var sale: String = ""
-    var frontPhoto: UIImage?
-    var rearImage: UIImage?
-    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         

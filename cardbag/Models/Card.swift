@@ -13,7 +13,7 @@ class Card
 {
     var id: Int = 0
     var title: String = ""
-    var category: CategoryList!
+    var category: CategoryList?
     var front_photo:  UIImage? = nil
     var back_photo: UIImage? = nil
     var barcode_photo: String = ""
@@ -23,6 +23,8 @@ class Card
     var discount: Int = 0
     var created_at: String = ""
     var updated_at: String = ""
+    
+    init () {}
     
     init ( a: Any)
     {
