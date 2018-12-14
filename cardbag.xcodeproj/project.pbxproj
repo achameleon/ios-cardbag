@@ -25,6 +25,7 @@
 		0F25A93F21C3AD1E0000F2E0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F25A93E21C3AD1E0000F2E0 /* Alamofire.framework */; };
 		0F25A94121C3AD1E0000F2E0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F25A94021C3AD1E0000F2E0 /* Realm.framework */; };
 		0F25A94321C3AD1E0000F2E0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F25A94221C3AD1E0000F2E0 /* RealmSwift.framework */; };
+		0F25A94521C3B2470000F2E0 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A94421C3B2470000F2E0 /* CardList.swift */; };
 		1A3C6DED8836602147E55CC6 /* Pods_cardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070E1E69E75CBAC34E9192EE /* Pods_cardbag.framework */; };
 		84E26DFC21BA726800ED7C4D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26DF321BA726800ED7C4D /* Card.swift */; };
 		84E26E1821C3A7A100ED7C4D /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26E1321C3A7A100ED7C4D /* CardsListViewController.swift */; };
@@ -57,6 +58,7 @@
 		0F25A93E21C3AD1E0000F2E0 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F25A94021C3AD1E0000F2E0 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F25A94221C3AD1E0000F2E0 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F25A94421C3B2470000F2E0 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		2D6953638C8BB339B6A779AA /* Pods-cardbag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.debug.xcconfig"; sourceTree = "<group>"; };
 		7CA25B45E37D17294E21052F /* Pods-cardbag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.release.xcconfig"; sourceTree = "<group>"; };
 		84E26DF321BA726800ED7C4D /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				0F25A92021C3AA030000F2E0 /* CategoryList.swift */,
+				0F25A94421C3B2470000F2E0 /* CardList.swift */,
 				0F25A92121C3AA030000F2E0 /* Model */,
 			);
 			name = Entity;
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E26E1A21C3A7A100ED7C4D /* TableViewCell.swift in Sources */,
+				0F25A94521C3B2470000F2E0 /* CardList.swift in Sources */,
 				0F25A93221C3AA570000F2E0 /* Categories.swift in Sources */,
 				84E26E1821C3A7A100ED7C4D /* CardsListViewController.swift in Sources */,
 				CE30C7A62182FD11004FD699 /* AppDelegate.swift in Sources */,

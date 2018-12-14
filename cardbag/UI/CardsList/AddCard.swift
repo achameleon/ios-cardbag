@@ -11,6 +11,7 @@ import UIKit
 class AddCard: UIViewController, UITextFieldDelegate {
     
     var category: CategoryList?
+    var card: CardRepository?
     
     @IBOutlet weak var btnPhoto: UIButton!
     @IBOutlet weak var cardName: UITextField!
@@ -42,6 +43,7 @@ class AddCard: UIViewController, UITextFieldDelegate {
     
     func photoFrontPage() {
         let nextPage = FrontPhoto()
+        nextPage.card = card
         nextPage.cardName = cardName.text ?? ""
         nextPage.sale = sale.text ?? ""
         nextPage.category = category
