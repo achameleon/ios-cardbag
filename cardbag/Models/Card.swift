@@ -13,7 +13,7 @@ class Card
 {
     var id: Int = 0
     var title: String = ""
-    var category: Category!
+    var category: CategoryList!
     var front_photo: String = ""
     var back_photo: String = ""
     var barcode_photo: String = ""
@@ -32,7 +32,7 @@ class Card
         }
         id = b["id"] as? Int ?? 0
         title = b["title"] as? String ?? ""
-        category = Category(a:a)
+        category = CategoryList(map: a as AnyObject)
         front_photo = b["front_photo"] as? String ?? ""
         back_photo = b["back_photo"] as? String ?? ""
         barcode_photo = b["barcode_photo"] as? String ?? ""
