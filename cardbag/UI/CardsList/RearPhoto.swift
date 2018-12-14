@@ -41,8 +41,10 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
         cardItem.discount = Int(sale) ?? 0
         cardItem.front_photo = frontPhoto
         cardItem.back_photo = rearImage
+        
         card?.addCard(card: cardItem)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         
