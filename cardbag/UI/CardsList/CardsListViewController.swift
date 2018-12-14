@@ -29,7 +29,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
 
-        cell.setDatas(Name: "Lenta" ,ClassCard: "dfdfd", Discount: "dff", Front: "cdfdfe", Back: "wddde")
+        cell.setDatas(Name: "Lenta" ,ClassCard: "dfdfd", Discount: "dff", Front: UIImage.init(named: "Card") , Back: UIImage.init(named: "Card") )
         return cell
     }
     
@@ -111,16 +111,23 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.present(alert, animated: true)
     }
     
-    @objc private func addCard()
-    {
+    @objc private func addCard() {
+        let addPage = AddCard()
+        let navigation = UINavigationController(rootViewController: addPage)
+        let closeButton = UIBarButtonItem(image: UIImage(named: "closeActive"), style: .plain, target: self, action: #selector(close))
         
+        addPage.navigationItem.title = "Добавить карту"
+        addPage.navigationItem.leftBarButtonItem = closeButton
+        navigationController?.present(navigation, animated: true, completion: nil)
     }
     
     @IBAction func onChangeTextButton(_ sender: Any) {
         updateSampleLabel()
     }
     
-    
+    @objc private func close() {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
 

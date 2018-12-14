@@ -7,15 +7,15 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Card
 {
     var id: Int = 0
     var title: String = ""
     var category: CategoryList!
-    var front_photo: String = ""
-    var back_photo: String = ""
+    var front_photo:  UIImage? = nil
+    var back_photo: UIImage? = nil
     var barcode_photo: String = ""
     var barcode: String = ""
     var deleted_at:String = ""
@@ -33,8 +33,6 @@ class Card
         id = b["id"] as? Int ?? 0
         title = b["title"] as? String ?? ""
         category = CategoryList(map: a as AnyObject)
-        front_photo = b["front_photo"] as? String ?? ""
-        back_photo = b["back_photo"] as? String ?? ""
         barcode_photo = b["barcode_photo"] as? String ?? ""
         barcode = b["barcode"] as? String ?? ""
         deleted_at = b["deleted_at"] as? String ?? ""

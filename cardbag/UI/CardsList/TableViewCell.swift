@@ -24,7 +24,7 @@ class TableViewCell: UITableViewCell {
     
     
     
-    func setDatas( Name:String, ClassCard:String, Discount:String, Front:String, Back:String){ 
+    func setDatas( Name:String, ClassCard:String, Discount:String, Front:UIImage? , Back:UIImage? ){
         self.Name.text = Name
         self.ClassCard.text = ClassCard
         self.Discount.text = Discount
