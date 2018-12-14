@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'cardbag' do
 
-    pod 'Alamofire', '4.7.0'
+pod 'Alamofire', '~> 4.7'
+pod 'RealmSwift'
 
 end

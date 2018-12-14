@@ -52,10 +52,11 @@ class FrontPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         }
     }
         
+
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+                               didFinishPickingMediaWithInfo info: [String : Any])
     {
-        let selectedImage : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        let selectedImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         myImageView.image = selectedImage
         self.dismiss(animated: true, completion: nil)
     }
