@@ -14,7 +14,7 @@ class Card
     var id: Int = 0
     var title: String = ""
     var category: CategoryList?
-    var front_photo:  UIImage? = nil
+    var front_photo: UIImage? = nil
     var back_photo: UIImage? = nil
     var barcode_photo: String = ""
     var barcode: String = ""
@@ -46,3 +46,28 @@ class Card
     
 }
 
+extension Card {
+    func toRealm() -> RCardItem {
+        
+        let cardItem = RCardItem()
+        
+        cardItem.id = id
+        cardItem.title = title
+        cardItem.sale = discount
+        
+        if let item = category {
+            cardItem.category = RCategoryItem(id: item.id, title: item.title)
+        }
+        if let imgF = front_photo,
+            let imageDataFront = UIImagePNGRepresentation(imgF) {
+            cardItem.picFront = imageDataFront
+        }
+        if let imgR = back_photo,
+            let imageDataRear = UIImagePNGRepresentation(imgR) {
+            cardItem.picBack = imageDataRear
+        }
+        
+        return cardItem
+    }
+    
+}

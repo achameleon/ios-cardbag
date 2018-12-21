@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F00A07E21CCF99E00F0DED2 /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */; };
 		0F25A92321C3AA030000F2E0 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92021C3AA030000F2E0 /* CategoryList.swift */; };
 		0F25A92421C3AA030000F2E0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92221C3AA030000F2E0 /* Category.swift */; };
 		0F25A93221C3AA570000F2E0 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92621C3AA560000F2E0 /* Categories.swift */; };
@@ -23,6 +24,7 @@
 		0F25A94121C3AD1E0000F2E0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F25A94021C3AD1E0000F2E0 /* Realm.framework */; };
 		0F25A94321C3AD1E0000F2E0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F25A94221C3AD1E0000F2E0 /* RealmSwift.framework */; };
 		0F25A94521C3B2470000F2E0 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A94421C3B2470000F2E0 /* CardList.swift */; };
+		0F25A94D21C3C4EA0000F2E0 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A94C21C3C4EA0000F2E0 /* CardItem.swift */; };
 		1A3C6DED8836602147E55CC6 /* Pods_cardbag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070E1E69E75CBAC34E9192EE /* Pods_cardbag.framework */; };
 		7F9C3FB821CCE61900D81441 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C3FB621CCE61900D81441 /* ProfileViewController.swift */; };
 		7F9C3FB921CCE61900D81441 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9C3FB721CCE61900D81441 /* ProfileViewController.xib */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		070E1E69E75CBAC34E9192EE /* Pods_cardbag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cardbag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
 		0F25A92021C3AA030000F2E0 /* CategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		0F25A92221C3AA030000F2E0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F25A92621C3AA560000F2E0 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = CardBag/UI/CardsList/Categories.swift; sourceTree = SOURCE_ROOT; };
@@ -59,6 +62,7 @@
 		0F25A94021C3AD1E0000F2E0 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F25A94221C3AD1E0000F2E0 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F25A94421C3B2470000F2E0 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
+		0F25A94C21C3C4EA0000F2E0 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardItem.swift; path = cardbag/Entity/Model/CardItem.swift; sourceTree = SOURCE_ROOT; };
 		2D6953638C8BB339B6A779AA /* Pods-cardbag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.debug.xcconfig"; sourceTree = "<group>"; };
 		7CA25B45E37D17294E21052F /* Pods-cardbag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardbag.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardbag/Pods-cardbag.release.xcconfig"; sourceTree = "<group>"; };
 		7F9C3FB621CCE61900D81441 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F00A07C21CCF97900F0DED2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		0F25A91F21C3AA030000F2E0 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				0F25A92221C3AA030000F2E0 /* Category.swift */,
+				0F25A94C21C3C4EA0000F2E0 /* CardItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7F9C3FC321CCE9CF00D81441 /* Header.h */,
+				0F00A07C21CCF97900F0DED2 /* Services */,
 				0F25A91F21C3AA030000F2E0 /* Entity */,
 				84E26DF221BA726800ED7C4D /* Models */,
 				84E26E1121C3A7A100ED7C4D /* UI */,
@@ -411,7 +425,9 @@
 				0F25A92321C3AA030000F2E0 /* CategoryList.swift in Sources */,
 				0F25A92421C3AA030000F2E0 /* Category.swift in Sources */,
 				0F25A93821C3AA570000F2E0 /* AddCard.swift in Sources */,
+				0F25A94D21C3C4EA0000F2E0 /* CardItem.swift in Sources */,
 				0F25A93D21C3AA570000F2E0 /* MyCustomCell.swift in Sources */,
+				0F00A07E21CCF99E00F0DED2 /* KeyStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

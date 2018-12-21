@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class CardsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    var card: CardRepository = CardRepository()
     @IBOutlet weak var Prob: UILabel!
     @IBOutlet weak var TableView: UITableView!
 
@@ -21,15 +21,18 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return card.getList().count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-
-        cell.setDatas(Name: "Lenta" ,ClassCard: "dfdfd", Discount: "dff", Front: UIImage.init(named: "Card") , Back: UIImage.init(named: "Card") )
+        
+   
+        let item = card.getList()[indexPath.row]
+        
+        cell.setDatas(Name: item.title ,ClassCard: "dfdfd", Discount: String(item.discount), Front: item.front_photo , Back: item.back_photo)
         return cell
     }
     
@@ -48,7 +51,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         let usr = UIBarButtonItem(image: UIImage( named: "userActive"), style: .plain, target: self, action: #selector(userAction))
         
         if cards.count == 0  {
-            //self.TableView.isHidden = true
+           self.TableView.isHidden = true
             
         }
         let nib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
@@ -75,10 +78,6 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func addCards()
-    {
-        
-    }
     
     func logIn(action: UIAlertAction) {
         let controller = LoginViewController()
@@ -124,6 +123,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @objc private func addCard() {
         let addPage = AddCard()
+        addPage.card = card
         let navigation = UINavigationController(rootViewController: addPage)
         let closeButton = UIBarButtonItem(image: UIImage(named: "closeActive"), style: .plain, target: self, action: #selector(close))
         
@@ -140,5 +140,15 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         dismiss(animated: true, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if card.getList().count == 0  {
+            self.TableView.isHidden = true
+        } else {
+            self.TableView.isHidden = false
+        }
+        TableView.reloadData()
+    }
+    
 }
+
 

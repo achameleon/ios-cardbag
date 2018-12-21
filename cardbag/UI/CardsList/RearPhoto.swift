@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -36,13 +38,25 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBAction func save(_ sender: Any) {
         let cardItem = Card()
+        let id = KeyStorage()
+        cardItem.id = id.userId
         cardItem.title = cardName
         cardItem.category = category
         cardItem.discount = Int(sale) ?? 0
         cardItem.front_photo = frontPhoto
         cardItem.back_photo = rearImage
+        
         card?.addCard(card: cardItem)
+        id.userId += 1
+        id.userDefault.synchronize()
+        
+        let realm = try! Realm()        
+        realm.beginWrite()
+        realm.add(cardItem.toRealm(), update: true)
+        try! realm.commitWrite()
+        dismiss(animated: true, completion: nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         
