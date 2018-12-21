@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F00A07E21CCF99E00F0DED2 /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */; };
 		0F25A92321C3AA030000F2E0 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92021C3AA030000F2E0 /* CategoryList.swift */; };
 		0F25A92421C3AA030000F2E0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92221C3AA030000F2E0 /* Category.swift */; };
 		0F25A93221C3AA570000F2E0 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F25A92621C3AA560000F2E0 /* Categories.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		070E1E69E75CBAC34E9192EE /* Pods_cardbag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cardbag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
 		0F25A92021C3AA030000F2E0 /* CategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		0F25A92221C3AA030000F2E0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F25A92621C3AA560000F2E0 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = CardBag/UI/CardsList/Categories.swift; sourceTree = SOURCE_ROOT; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F00A07C21CCF97900F0DED2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0F00A07D21CCF99E00F0DED2 /* KeyStorage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		0F25A91F21C3AA030000F2E0 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		CE30C7A42182FD11004FD699 /* cardbag */ = {
 			isa = PBXGroup;
 			children = (
+				0F00A07C21CCF97900F0DED2 /* Services */,
 				0F25A91F21C3AA030000F2E0 /* Entity */,
 				84E26DF221BA726800ED7C4D /* Models */,
 				84E26E1121C3A7A100ED7C4D /* UI */,
@@ -347,6 +358,7 @@
 				0F25A93821C3AA570000F2E0 /* AddCard.swift in Sources */,
 				0F25A94D21C3C4EA0000F2E0 /* CardItem.swift in Sources */,
 				0F25A93D21C3AA570000F2E0 /* MyCustomCell.swift in Sources */,
+				0F00A07E21CCF99E00F0DED2 /* KeyStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
