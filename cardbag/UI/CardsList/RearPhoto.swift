@@ -37,8 +37,6 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func save(_ sender: Any) {
-        let imageDataFront: NSData = UIImagePNGRepresentation(frontPhoto)
-        let imageDataRear: NSData = UIImagePNGRepresentation(rearImage)
         
         let cardItem = Card()
         cardItem.title = cardName
@@ -51,8 +49,9 @@ class RearPhoto: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         let realm = try! Realm()        
         realm.beginWrite()
-        realm.add(RCardItem, update: true)
+        realm.add(cardItem.toRealm(), update: true)
         try! realm.commitWrite()
+        dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController,

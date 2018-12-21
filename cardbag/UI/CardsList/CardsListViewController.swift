@@ -130,6 +130,11 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if card.getList().count == 0  {
+            self.TableView.isHidden = true
+        } else {
+            self.TableView.isHidden = false
+        }
         TableView.reloadData()
     }
     
