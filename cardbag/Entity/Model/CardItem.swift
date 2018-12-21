@@ -9,6 +9,7 @@
 import Foundation
 import Realm
 import RealmSwift
+import UIKit
 
 class RCardItem: Object {
     @objc dynamic var id: Int = 0
@@ -26,5 +27,27 @@ class RCardItem: Object {
         self.init()
         self.id = id
         self.title = title
+    }
+}
+
+extension RCardItem {
+    func toCard() -> Card {
+        let cardItem = Card()
+        
+        cardItem.id = id
+        cardItem.title = title
+        cardItem.discount = sale
+        
+        if let item = category {
+            cardItem.category = CategoryList(id: item.id, title: item.title)
+        }
+        if let imgF = picFront, let imageDataFront = UIImage(data: imgF) {
+            cardItem.front_photo = imageDataFront
+        }
+        if let imgR = picBack, let imageDataRear = UIImage(data: imgR) {
+            cardItem.back_photo = imageDataRear
+        }
+        
+        return cardItem
     }
 }
