@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="cardbag" customModuleProvider="target">
+            <connections>
+                <outlet property="b_facebook" destination="maM-HU-GZ1" id="jDG-IG-2gA"/>
+                <outlet property="b_google" destination="9Mr-NR-w2g" id="AJT-r5-aYJ"/>
+                <outlet property="b_phone" destination="T5F-Ks-6UY" id="NTY-SZ-yKl"/>
+                <outlet property="b_vk" destination="fPT-2Q-92N" id="WGJ-fA-n5A"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти по номеру телефона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQ4-S8-5Us">
+                    <rect key="frame" x="39.5" y="80" width="296" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти через социальные сети" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8y-Nb-po1">
+                    <rect key="frame" x="23.5" y="242" width="328" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPT-2Q-92N">
+                    <rect key="frame" x="162.5" y="285" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dfG-DP-Qgc"/>
+                        <constraint firstAttribute="width" constant="50" id="qvw-MM-jQc"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Vk"/>
+                    <connections>
+                        <action selector="b_vk_act:" destination="-1" eventType="touchUpInside" id="vEb-0a-zDH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mr-NR-w2g">
+                    <rect key="frame" x="224.5" y="285" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="6r8-E1-tHm"/>
+                        <constraint firstAttribute="height" constant="50" id="tsJ-58-scZ"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Google"/>
+                    <connections>
+                        <action selector="b_google_act:" destination="-1" eventType="touchUpInside" id="ekZ-nc-oFG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maM-HU-GZ1">
+                    <rect key="frame" x="100.5" y="285" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FXg-8n-A9a"/>
+                        <constraint firstAttribute="width" constant="50" id="NBF-b3-IN0"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Facebook"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5F-Ks-6UY">
+                    <rect key="frame" x="157.5" y="123" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="0wA-fq-wzM"/>
+                        <constraint firstAttribute="height" constant="60" id="bTw-HV-wjq"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Login"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OQ4-S8-5Us" secondAttribute="trailing" constant="39.5" id="13S-kt-6O9"/>
+                <constraint firstItem="m8y-Nb-po1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="14G-UH-eqc"/>
+                <constraint firstItem="T5F-Ks-6UY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9Ti-gY-ZUa"/>
+                <constraint firstItem="9Mr-NR-w2g" firstAttribute="leading" secondItem="fPT-2Q-92N" secondAttribute="trailing" constant="12" id="Kxd-e7-Si0"/>
+                <constraint firstItem="m8y-Nb-po1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="23.5" id="NsW-Fz-Fl9"/>
+                <constraint firstItem="maM-HU-GZ1" firstAttribute="top" secondItem="m8y-Nb-po1" secondAttribute="bottom" constant="14" id="OqI-Y2-NAc"/>
+                <constraint firstItem="T5F-Ks-6UY" firstAttribute="top" secondItem="OQ4-S8-5Us" secondAttribute="bottom" constant="14" id="U8M-Jr-sjH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m8y-Nb-po1" secondAttribute="trailing" constant="23.5" id="VhO-no-NWx"/>
+                <constraint firstItem="OQ4-S8-5Us" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="i3k-tR-cMz"/>
+                <constraint firstItem="OQ4-S8-5Us" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39.5" id="jjg-Gq-94l"/>
+                <constraint firstItem="9Mr-NR-w2g" firstAttribute="top" secondItem="m8y-Nb-po1" secondAttribute="bottom" constant="14" id="mdj-jp-yU1"/>
+                <constraint firstItem="fPT-2Q-92N" firstAttribute="leading" secondItem="maM-HU-GZ1" secondAttribute="trailing" constant="12" id="oaQ-e8-xDs"/>
+                <constraint firstItem="fPT-2Q-92N" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pmL-YX-GMH"/>
+                <constraint firstItem="fPT-2Q-92N" firstAttribute="leading" secondItem="maM-HU-GZ1" secondAttribute="trailing" constant="12" id="sDV-IY-se9"/>
+                <constraint firstItem="9Mr-NR-w2g" firstAttribute="leading" secondItem="fPT-2Q-92N" secondAttribute="trailing" constant="12" id="t8r-TH-OEP"/>
+                <constraint firstItem="OQ4-S8-5Us" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="u3H-Id-qSk"/>
+                <constraint firstItem="m8y-Nb-po1" firstAttribute="top" secondItem="T5F-Ks-6UY" secondAttribute="bottom" constant="59" id="wKW-JL-BtO"/>
+                <constraint firstItem="fPT-2Q-92N" firstAttribute="top" secondItem="m8y-Nb-po1" secondAttribute="bottom" constant="14" id="xdl-ag-UZN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Facebook" width="60" height="60"/>
+        <image name="Google" width="60" height="60"/>
+        <image name="Login" width="60" height="60"/>
+        <image name="Vk" width="60" height="60"/>
+    </resources>
+</document>

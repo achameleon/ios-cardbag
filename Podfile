@@ -6,5 +6,9 @@ target 'cardbag' do
 
 pod 'Alamofire', '~> 4.7'
 pod 'RealmSwift'
-
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
+pod 'Kingfisher'
+pod 'VK-ios-sdk'
 end

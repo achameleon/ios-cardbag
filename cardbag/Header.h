@@ -6,4 +6,5 @@
 //  Copyright © 2018 arcMi. All rights reserved.
 //
 
-#import <CardIO/CardIO.h>
+@import VK_ios_sdk;
+//#import <VK-ios-sdk/VKSdk.h>

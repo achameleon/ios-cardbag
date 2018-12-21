@@ -45,7 +45,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         TableView.tableFooterView = UIView()
         TableView.delegate = self
         navigationItem.title = "CARDbag"
-        let usr = UIBarButtonItem(image: UIImage( named: "userActive"), style: .plain, target: self, action: #selector(updateSampleLabel))
+        let usr = UIBarButtonItem(image: UIImage( named: "userActive"), style: .plain, target: self, action: #selector(userAction))
         
         if cards.count == 0  {
             //self.TableView.isHidden = true
@@ -81,7 +81,9 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func logIn(action: UIAlertAction) {
-        
+        let controller = LoginViewController()
+        let NavigationController = UINavigationController(rootViewController: controller)
+        navigationController?.present(NavigationController, animated: true, completion: nil)
     }
     func register(action: UIAlertAction) {
         
@@ -90,25 +92,34 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.dismiss(animated: true, completion: nil)
     }
 	
-    @objc private func updateSampleLabel()
+    @objc private func userAction()
     {
-        let alert = UIAlertController(title: nil,
-                                      message: nil,
-                                      preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.title  = "Вы еще не зарегистрированы"
-        let logIn = UIAlertAction(title: "Войти",
-                                  style: UIAlertActionStyle.default, handler: self.logIn)
-        let register = UIAlertAction(title: "Зарегистрироваться",
-                                     style: UIAlertActionStyle.default, handler: self.register)
-        let cancel = UIAlertAction(title: "Отмена",
-                                   style: UIAlertActionStyle.cancel, handler: self.cancel)
-        alert.addAction(logIn)
-        alert.addAction(register)
-        alert.addAction(cancel)
-        if let popoverController = alert.popoverPresentationController {
-            popoverController.sourceView = view
+        if UserDefaults.standard.string(forKey: "accesstoken") == nil
+        {
+            let alert = UIAlertController(title: nil,
+                                          message: nil,
+                                          preferredStyle: UIAlertControllerStyle.actionSheet)
+            alert.title  = "Вы еще не зарегистрированы"
+            let logIn = UIAlertAction(title: "Войти",
+                                      style: UIAlertActionStyle.default, handler: self.logIn)
+            let register = UIAlertAction(title: "Зарегистрироваться",
+                                         style: UIAlertActionStyle.default, handler: self.register)
+            let cancel = UIAlertAction(title: "Отмена",
+                                       style: UIAlertActionStyle.cancel, handler: self.cancel)
+            alert.addAction(logIn)
+            alert.addAction(register)
+            alert.addAction(cancel)
+            if let popoverController = alert.popoverPresentationController {
+                popoverController.sourceView = view
+            }
+            self.present(alert, animated: true)
         }
-        self.present(alert, animated: true)
+        else
+        {
+            let controller = ProfileViewController()
+            let NavigationController = UINavigationController(rootViewController: controller)
+            navigationController?.present(NavigationController, animated: true, completion: nil)
+        }
     }
     
     @objc private func addCard() {
@@ -122,7 +133,7 @@ class CardsListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction func onChangeTextButton(_ sender: Any) {
-        updateSampleLabel()
+        userAction()
     }
     
     @objc private func close() {

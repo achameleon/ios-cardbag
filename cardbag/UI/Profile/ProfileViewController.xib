@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="cardbag" customModuleProvider="target">
+            <connections>
+                <outlet property="b_exit" destination="E0K-KC-Zr8" id="yFC-dC-JN7"/>
+                <outlet property="img_vk" destination="KtF-pB-rnx" id="aWr-yz-yET"/>
+                <outlet property="lb_Name" destination="bCX-aC-gIE" id="kRh-bX-6zm"/>
+                <outlet property="lb_cards" destination="EDh-mm-1tj" id="582-k1-fvv"/>
+                <outlet property="lb_id" destination="ElZ-Cf-fxq" id="4g3-pz-ZYj"/>
+                <outlet property="lb_sync" destination="xB9-FI-ZtB" id="kJH-wM-l7Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иван Иванов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCX-aC-gIE">
+                    <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Z82-lO-zof"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество карт: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDh-mm-1tj">
+                    <rect key="frame" x="16" y="157" width="162" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Все карты синхронизированы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-FI-ZtB">
+                    <rect key="frame" x="16" y="203" width="255" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vk" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-pB-rnx">
+                    <rect key="frame" x="16" y="271" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Ruo-b1-CVi"/>
+                        <constraint firstAttribute="width" constant="60" id="hgo-8c-f6k"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vk.com/id71147735" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-Cf-fxq">
+                    <rect key="frame" x="91" y="291" width="157" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0K-KC-Zr8">
+                    <rect key="frame" x="37.5" y="562" width="300" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="F9Y-mk-NIh"/>
+                        <constraint firstAttribute="width" constant="300" id="rfI-HI-JdS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <state key="normal" title="Выйти">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="b_exit_onclick:" destination="-1" eventType="touchUpInside" id="RAl-Qo-XOw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EDh-mm-1tj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="328-aS-V6k"/>
+                <constraint firstItem="E0K-KC-Zr8" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7Xx-Sd-z9f"/>
+                <constraint firstItem="KtF-pB-rnx" firstAttribute="top" secondItem="xB9-FI-ZtB" secondAttribute="bottom" constant="46" id="9Xf-ul-Mf3"/>
+                <constraint firstAttribute="trailing" secondItem="bCX-aC-gIE" secondAttribute="trailing" id="AJS-8Y-mdw"/>
+                <constraint firstItem="ElZ-Cf-fxq" firstAttribute="top" secondItem="xB9-FI-ZtB" secondAttribute="bottom" constant="66" id="FBQ-SY-dOb"/>
+                <constraint firstItem="bCX-aC-gIE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HG2-IK-gzA"/>
+                <constraint firstItem="bCX-aC-gIE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NvC-ZK-J0y"/>
+                <constraint firstItem="ElZ-Cf-fxq" firstAttribute="leading" secondItem="KtF-pB-rnx" secondAttribute="trailing" constant="15" id="RXd-xo-lcC"/>
+                <constraint firstItem="xB9-FI-ZtB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XlQ-fr-nk4"/>
+                <constraint firstItem="xB9-FI-ZtB" firstAttribute="top" secondItem="EDh-mm-1tj" secondAttribute="bottom" constant="24" id="cRP-Jb-WUS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="E0K-KC-Zr8" secondAttribute="bottom" constant="45" id="esT-7O-HcE"/>
+                <constraint firstItem="KtF-pB-rnx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="p7a-cZ-8IT"/>
+                <constraint firstItem="EDh-mm-1tj" firstAttribute="top" secondItem="bCX-aC-gIE" secondAttribute="bottom" constant="37" id="wYS-Ti-f8h"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vk" width="60" height="60"/>
+    </resources>
+</document>
